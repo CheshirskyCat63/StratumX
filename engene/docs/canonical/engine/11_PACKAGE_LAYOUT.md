@@ -1,0 +1,59 @@
+# Package Layout
+
+## Root
+
+- `00_INDEX.md`
+- `01_SCOPE.md`
+- `02_CANONICAL_STACK.md`
+- `03_ROLE_MAP.md`
+- `04_LIBRARY_BASELINE.md`
+- `05_DEPENDENCY_MODEL.md`
+- `06_COMMUNICATION_MODEL.md`
+- `07_THREADING_MODEL.md`
+- `08_EXECUTION_FLOW.md`
+- `09_GLOSSARY.md`
+- `10_DOCUMENT_RULES.md`
+- `11_PACKAGE_LAYOUT.md`
+- `11_CANON_TRANSITION_MAP.md`
+- `12_BOUNDARY_PRESERVATION_MATRIX.md`
+- `13_ALIAS_AND_RENAME_MAP.md`
+- `STACK_VERSION`
+
+## Constitutions
+
+- `constitutions/00_INDEX.md`
+- `constitutions/STRATUMX_CONSTITUTION_PRECEDENCE_RULE.md`
+- `constitutions/STRATUMX_EXECUTION_CONSTITUTION.md`
+- `constitutions/STRATUMX_THREADING_CONSTITUTION.md`
+- `constitutions/STRATUMX_DATA_AND_STATE_CONSTITUTION.md`
+- `constitutions/STRATUMX_WORLD_PROGRESSION_FLOW.md`
+- `constitutions/STRATUMX_NAMING_AND_TERMINOLOGY_FREEZE.md`
+- `constitutions/STRATUMX_API_CONTRACT_LAW.md`
+- `constitutions/STRATUMX_CANONICAL_SHAPES.md`
+- `constitutions/STRATUMX_CONFIGURATION_CONSTITUTION.md`
+- `constitutions/STRATUMX_ENABLEMENT_LEGALITY_MATRIX.md`
+- `constitutions/STRATUMX_OBSERVABILITY_CONSTITUTION.md`
+- `constitutions/STRATUMX_DEGRADATION_POLICY_LAW.md`
+- `constitutions/STRATUMX_PERSISTENCE_AND_SNAPSHOT_CONSTITUTION.md`
+- `constitutions/STRATUMX_PERSISTENCE_COMPATIBILITY_LAW.md`
+- `constitutions/STRATUMX_STACK_VERSION_SOURCE.md`
+- `constitutions/STRATUMX_TESTING_CONSTITUTION.md`
+- `constitutions/STRATUMX_TEST_SEVERITY_SYSTEM.md`
+- `constitutions/STRATUMX_LAYER_TEST_MATRIX.md`
+- `constitutions/STRATUMX_CRATE_TEST_MATRIX.md`
+- `constitutions/STRATUMX_PERFORMANCE_CONSTITUTION.md`
+- `constitutions/STRATUMX_PERFORMANCE_GATE_MATRIX.md`
+- `constitutions/STRATUMX_CRATE_PERFORMANCE_BUDGETS.md`
+- `constitutions/STRATUMX_WORKSPACE_AND_REPOSITORY_CANON.md`
+
+## Implementation
+
+- `implementation/00_INDEX.md`
+- `implementation/STRATUMX_IMPLEMENTATION_ORDER.md`
+- `implementation/STRATUMX_FIRST_COMPILEABLE_SKELETON.md`
+- `implementation/STRATUMX_FIRST_HEADLESS_RUNTIME_MILESTONE.md`
+- `implementation/STRATUMX_CRATE_CONTRACT_SKELETONS.md`
+
+## Levels
+
+- `levels/` contains level and crate folders from `L-1` through `L4`.

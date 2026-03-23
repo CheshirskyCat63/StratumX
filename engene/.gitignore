@@ -1,0 +1,26 @@
+﻿# Build output
+target/
+**/target/
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Archives and raw drops
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# OS noise
+Thumbs.db
+.DS_Store

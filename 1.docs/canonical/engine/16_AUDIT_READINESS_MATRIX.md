@@ -1,4 +1,4 @@
-# Audit Readiness Matrix
+﻿# Audit Readiness Matrix
 
 ## Purpose
 
@@ -9,9 +9,11 @@ This document records whether the engine canonical package is ready for implemen
 | Readiness Item | Status | Canonical Basis |
 |---|---|---|
 | package registered coverage closure | pass | `14_ACCEPTANCE_MATRIX.md` registered coverage set passes |
+| stack/role/glossary alignment | pass | ROOT-001, EVID-ROOT-001 |
 | dependency legality closure | pass | `ROOT-002`, `EVID-ROOT-002` |
 | runtime phase closure | pass | `ROOT-003`, `EVID-ROOT-003` |
 | repository/package alignment | pass | `ROOT-004`, `EVID-ROOT-004` |
+| startup-mediated content/runtime-pack relation | pass | ROOT-005, EVID-ROOT-005 |
 | implementation-order legality | pass | `ROOT-006`, `EVID-ROOT-006` |
 | API-law to skeleton legality | pass | `ROOT-007`, `EVID-ROOT-007` |
 | package closure docs registered | pass | `ROOT-008`, `EVID-ROOT-008` |

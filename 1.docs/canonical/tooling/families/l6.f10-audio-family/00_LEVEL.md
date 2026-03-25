@@ -1,8 +1,19 @@
-# L6.F10 Level
+# Family Level
 
-Canonical layer: `audio_family`
+Canonical family: `audio_family`
 
-Exists to own exactly one tooling role: audio family composition.
-Core data classes: audio graph lane, signal lane, trigger lane, acoustic preview lane.
-It explicitly does not own: runtime acoustics authority, cinematic truth, build/package logic.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- audio authoring, buses, routing views, and audio manifests
+
+## Data responsibility
+- authority-facing minimal truth: audio edit intents
+- snapshot classes: audio snapshots
+- index classes: audio lookup indices
+- derived classes: derived audio views
+- artifact classes: audio artifacts and manifests
+- preview classes: audio previews
+- cache classes: audio caches
+- diagnostics classes: audio diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

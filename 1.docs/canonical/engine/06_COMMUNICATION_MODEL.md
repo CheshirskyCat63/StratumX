@@ -28,7 +28,7 @@ Communication is built on:
 - synthesis systems emit image and acoustic products;
 - resource systems emit prepared resource products and runtime-pack products;
 - startup validates, selects, and binds legal runtime-pack inputs into runtime resource services;
-- startup assembles and launches the stack.
+- startup assembles, launches the stack, and publishes narrow public bridge export surfaces for the external `L5` boundary.
 
 ## Ownership Rule
 
@@ -36,7 +36,7 @@ Communication is built on:
 - global parallel ownership stays in `engine_runtime`;
 - runtime resource ownership stays in `engine_stream_control`, `engine_residency_control`, `engine_memory_control`, and `engine_transfer_control`;
 - network transport/sync/latency ownership stays in `engine_net_transport`, `engine_net_sync`, and `engine_net_latency`;
-- startup owns launch, not execution;
+- startup owns launch and public bridge export bind, not execution;
 - upper families emit staged, prepared, or synthesized products, not arbitrary world truth.
 
 ## Immediate vs Deferred Rule

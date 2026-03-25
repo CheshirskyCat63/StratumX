@@ -1,8 +1,19 @@
-# L6.F12 Level
+# Family Level
 
-Canonical layer: `automation_family`
+Canonical family: `automation_family`
 
-Exists to own exactly one tooling role: automation family composition.
-Core data classes: script lane, batch lane, test lane, maintenance lane.
-It explicitly does not own: engine law, SDK legality authority, continuous polling.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- automation editor views, automation specs, and automation diagnostics
+
+## Data responsibility
+- authority-facing minimal truth: automation edit intents
+- snapshot classes: automation snapshots
+- index classes: automation lookup indices
+- derived classes: derived automation views
+- artifact classes: automation artifacts and manifests
+- preview classes: automation previews
+- cache classes: automation caches
+- diagnostics classes: automation diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

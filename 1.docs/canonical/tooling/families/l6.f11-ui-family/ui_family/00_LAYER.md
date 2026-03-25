@@ -1,15 +1,4 @@
-# ui_family
+# Layer
 
-Role class: family composition
-
-Canonical role:
-compose screen, widget, style, and flow workflows.
-
-One data kind law:
-This layer owns only UI family composition.
-
-Minimal operational meaning:
-routes UI authoring lanes only
-
-Forbidden drift:
-tooling shell ownership, gameplay truth, rendering backend ownership.
+Canonical family layer: `ui_family`.
+The family composes editor/runtime clients around canonical planes and never replaces plane ownership.

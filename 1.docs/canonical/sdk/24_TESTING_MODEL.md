@@ -1,24 +1,19 @@
 # Testing Model
 
-## Required test classes
-- package-layout audit
-- terminology audit
-- role-class audit
-- dependency audit
-- field-contract audit
-- boundary-authority audit
-- threading-model audit
-- shared-type-registry audit
-- packet/observation/metric naming audit
-- opaque-upward handle/ref audit
-
-## Required mechanical proofs
-- per-session write-side order
-- immutable read-side fanout
-- compatibility verdict determinism
-- legality-gate determinism
-- opaque handle/ref round-trip stability
-- no forbidden dependency import
-
-## Non-goal
-L5 tests do not prove editor workflows, import pipelines, preview generation, or release orchestration.
+Required test classes:
+- packet publication legality tests
+- control publication legality tests
+- compatibility lookup correctness tests
+- legality lookup correctness tests
+- ingress ordering tests
+- snapshot swap visibility tests
+- observation batch immutability tests
+- metric batch immutability tests
+- cursor progression and lag-bound tests
+- handle/ref opacity tests
+- artifact ref opacity tests
+- replay classification tests
+- fanout pressure tests
+- bounded allocation tests
+- no hidden store tests
+- invalidation and epoch rollover tests

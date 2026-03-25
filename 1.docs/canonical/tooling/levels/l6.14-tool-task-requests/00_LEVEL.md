@@ -1,8 +1,15 @@
-# L6.14 Level
+# tool_task_requests Level
 
 Canonical layer: `tool_task_requests`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: task request descriptors.
-Core data classes: task_request_id, tool_id, task_kind, task_input_refs, priority, cancellation_ref.
-It explicitly does not own: task execution runtime, task result ownership, session truth.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- typed task requests to assistant/runtime/orchestration surfaces
+
+## Parent runtime
+- L6A and L7 boundaries
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

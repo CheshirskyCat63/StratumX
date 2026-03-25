@@ -1,13 +1,14 @@
 # L4 Synchronization Model
 
-## Public-surface-only rule
-L5 synchronizes only with public L4 packet, control, observation, metric, session-handle, object-handle, runtime-handle, identity-export, and state-export surfaces.
+Engine L4 must publish startup-bound public contract surfaces.
+L5 synchronizes only with those public surfaces:
+- ingress packet sinks
+- ingress control sinks
+- observation batch sources
+- metric batch sources
+- compatibility fact snapshot tables
+- handle and ref snapshot tables
+- artifact ref snapshot tables
+- bridge epoch and invalidation signals
 
-## Synchronization law
-- write-side synchronization preserves per-session order.
-- read-side synchronization preserves source emission order.
-- exported handles and refs are published immutably upward.
-- L5 never reaches below public L4 contracts to reconstruct hidden runtime state.
-
-## Drift guard
-Any proposed dependency on non-public L4 internals is a package-level blocker.
+L5 does not crawl engine internals. It binds once to public export surfaces, resolves bridge epochs through declared invalidation signals, and keeps the bridge narrow.

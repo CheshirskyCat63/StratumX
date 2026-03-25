@@ -1,6 +1,12 @@
 # Libraries
 
-Locally justified libraries:
-- UI adapters, tracing
+Allowed library classes:
+- schema and ref types for vfx_family
+- snapshot/index/derived/artifact-safe helpers
+- diagnostics helpers
+- preview helpers when preview classes are declared
 
-Any baseline library not listed as locally justified is only conditionally allowed and may not be added without a field or transport need.
+Forbidden library classes:
+- hidden authority stores
+- unbounded caches
+- direct engine adapters

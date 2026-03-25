@@ -1,8 +1,9 @@
-        # Fields
+# Fields
 
-        - `family_id: FamilyId` required.
-- `screen_ref: ScreenRef` optional.
-- `widget_refs: WidgetRef[]` optional, many.
-- `style_token_refs: StyleTokenRef[]` optional, many.
+- `family_id: FamilyId` required.
+- `family_ref: UiFamilyRef` required.
+- `snapshot_ref_set: SnapshotRef[]` optional, many.
+- `artifact_manifest_ref_set: ArtifactManifestRef[]` optional, many.
+- `diagnostics_ref_set: DiagnosticsRef[]` optional, many.
 
-        Cardinality, ownership, and invariants are part of canon.
+Cardinality, ownership, and invariants are part of canon.

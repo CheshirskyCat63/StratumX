@@ -1,8 +1,19 @@
-# L6.F14 Level
+# Family Level
 
-Canonical layer: `assistant_family`
+Canonical family: `assistant_family`
 
-Exists to own exactly one tooling role: assistant family composition.
-Core data classes: bootstrap lane, repair lane, refactor lane, build assist lane, simulation explanation lane.
-It explicitly does not own: direct project mutation, engine direct access, hidden execution.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- assistant experience, proposal views, assistant diagnostics, and assistant task surfaces
+
+## Data responsibility
+- authority-facing minimal truth: assistant interaction refs only
+- snapshot classes: assistant snapshots
+- index classes: assistant lookup indices
+- derived classes: derived assistant views
+- artifact classes: assistant transcripts and deterministic assistant evidence artifacts
+- preview classes: assistant previews
+- cache classes: assistant caches
+- diagnostics classes: assistant diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

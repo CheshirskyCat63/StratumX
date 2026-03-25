@@ -1,43 +1,44 @@
 # Role Map
 
-## Owner facts
-- `tool_session`
-- `tool_selection`
-- `tool_focus_refs`
-- `tool_activation_state`
+## L6 owns
+- editor authority records
+- typed command envelopes
+- ordered transactions and undo/revert bindings
+- immutable snapshots
+- rebuildable indices
+- disposable derived projections
+- deterministic artifacts and manifests
+- bounded streams
+- evictable caches
+- budget enforcement
+- workspace runtime
+- validation runtime
+- preview runtime
+- build runtime
+- release runtime
 
-## Rules
-- `tool_activation_rules`
+## L6A owns
+- assistant session lifecycle
+- bounded evidence packs
+- proposals and proposal staging
+- lowering from proposals/plans to `L6` commands
+- safety and approval gates
+- apply/revert mediation
+- assistant-facing UI runtime
+- bounded model request runtime
 
-## Requests and intents
-- `tool_preview_requests`
-- `tool_content_intents`
-- `tool_scene_intents`
-- `tool_release_intents`
-- `tool_assistant_intents`
-- `tool_task_requests`
+## L7 owns
+- compiled campaign graphs
+- project, content, world, simulation, and release orchestration
+- automation meta
+- governance meta
+- reporting surfaces
 
-## Events and observations
-- `tool_diagnostics_events`
-
-## Results and projections
-- `tool_preview_results`
-- `tool_diagnostics_views`
-- `tool_inspection_views`
-- `tool_task_results`
-
-## UI attachment refs
-- `tool_panel_refs`
-- `tool_view_refs`
-
-## Family composition
-- all `L6.F*` families
-
-## Hard distinctions
-- facts own compact state;
-- rules declare activation conditions only;
-- requests and intents ask for work but do not perform work;
-- events publish observations only;
-- projections render read-side structure only;
-- result refs surface completed work only;
-- families compose lanes but own no new truth.
+## L7A owns
+- prompt normalization
+- planning IR construction
+- canon reasoning outputs
+- generation planning
+- optimization alternatives and trade-offs
+- migration plans
+- model routing policy

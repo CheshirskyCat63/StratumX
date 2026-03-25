@@ -1,8 +1,15 @@
-# L6.10 Level
+# tool_release_intents Level
 
 Canonical layer: `tool_release_intents`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: release workflow intents.
-Core data classes: BuildIntentRef, PackageIntentRef, ExportIntentRef, TestRunIntentRef.
-It explicitly does not own: build execution, package execution, release truth, deploy runtime.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- typed release/build intents only
+
+## Parent runtime
+- build_runtime and release_runtime
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

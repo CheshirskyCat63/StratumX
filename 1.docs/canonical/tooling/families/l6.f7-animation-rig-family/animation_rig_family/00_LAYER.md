@@ -1,15 +1,4 @@
-# animation_rig_family
+# Layer
 
-Role class: family composition
-
-Canonical role:
-compose rig, graph, retarget, and pose workflows.
-
-One data kind law:
-This layer owns only animation and rig family composition.
-
-Minimal operational meaning:
-routes animation/rig lanes only
-
-Forbidden drift:
-runtime animation authority, scene truth, cinematic ownership.
+Canonical family layer: `animation_rig_family`.
+The family composes editor/runtime clients around canonical planes and never replaces plane ownership.

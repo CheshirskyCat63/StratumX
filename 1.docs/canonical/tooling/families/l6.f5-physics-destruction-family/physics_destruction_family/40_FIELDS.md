@@ -1,8 +1,9 @@
-        # Fields
+# Fields
 
-        - `family_id: FamilyId` required.
-- `fracture_profile_ref: FractureProfileRef` optional.
-- `cluster_profile_ref: ClusterProfileRef` optional.
-- `active_debug_trace_refs: TraceRef[]` optional, many.
+- `family_id: FamilyId` required.
+- `family_ref: PhysicsDestructionFamilyRef` required.
+- `snapshot_ref_set: SnapshotRef[]` optional, many.
+- `artifact_manifest_ref_set: ArtifactManifestRef[]` optional, many.
+- `diagnostics_ref_set: DiagnosticsRef[]` optional, many.
 
-        Cardinality, ownership, and invariants are part of canon.
+Cardinality, ownership, and invariants are part of canon.

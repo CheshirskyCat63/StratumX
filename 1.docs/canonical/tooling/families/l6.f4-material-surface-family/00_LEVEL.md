@@ -1,8 +1,19 @@
-# L6.F4 Level
+# Family Level
 
-Canonical layer: `material_surface_family`
+Canonical family: `material_surface_family`
 
-Exists to own exactly one tooling role: material and surface family composition.
-Core data classes: material stack lane, surface rule lane, response preview lane, property inheritance lane.
-It explicitly does not own: simulation law, destruction authority, audio runtime, engine truth.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- surface authoring, material layering, and surface instance views
+
+## Data responsibility
+- authority-facing minimal truth: surface edit intents
+- snapshot classes: surface snapshots
+- index classes: surface lookup indices
+- derived classes: derived surface views
+- artifact classes: surface artifacts and manifests
+- preview classes: surface previews
+- cache classes: surface caches
+- diagnostics classes: surface diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

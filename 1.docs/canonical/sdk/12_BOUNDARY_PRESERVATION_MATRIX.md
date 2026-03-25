@@ -1,13 +1,11 @@
 # Boundary Preservation Matrix
 
-| Boundary | Must stay separate from | Why |
-|---|---|---|
-| `link_ingress_packets` | `link_ingress_controls` | packet envelopes and control envelopes obey different payload laws and stream-order domains |
-| `link_egress_observations` | `link_egress_metrics` | observations are semantic runtime emissions; metrics are measurement emissions |
-| `compat_versions` | `compat_capabilities` | versions and capabilities drift independently and must not collapse |
-| `compat_profiles` | `transport_policies` | profiles select policy; policies describe transport behavior |
-| `compat_verdicts` | `legality_gates` | compatibility answers contract truth; gates answer per-action permission now |
-| `engine_session_handles` | `engine_runtime_handles` | session lifetime and runtime-surface addressing are different authorities |
-| `engine_object_handles` | `engine_identity_refs` | live object addressing and stable identity export are different authorities |
-| `engine_identity_refs` | `engine_state_refs` | stable identity and exported state references are different owned data kinds |
-| all L5 layers | all L6 workflows | L5 is a truth bridge only and never an editor orchestration layer |
+| Boundary | Must preserve |
+|---|---|
+| engine L4 -> L5 | public sinks, public snapshots, and public batch sources only; no deep internal leakage |
+| L5 -> L6 | typed bridge classes, immutable snapshots, immutable batches, and bounded cursors only |
+| L5 -> L6A | indirect consumption through L6-owned context and streams by default |
+| L5 -> L7 | bounded status, profile, and artifact-facing data only |
+| L5 -> L7A | no direct raw bridge coupling by default |
+
+Any consumer above L5 must receive data in a shape that preserves ownership, budget class, and locality discipline.

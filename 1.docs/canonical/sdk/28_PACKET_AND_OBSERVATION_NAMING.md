@@ -1,14 +1,11 @@
-# Packet and Observation Naming
+# Packet And Observation Naming
 
-## Canonical rule
-- `PacketClass` is a class enum only.
-- `PacketPayloadType` is a payload-type enum only.
-- `ObservationClass` is a class enum only.
-- `ObservationPayloadType` is a payload-type enum only.
-- `MetricClass` is a class enum only.
-- `MetricPayloadType` is a payload-type enum only.
-
-## Forbidden drift
-- do not list payload-type names as class enums
-- do not list class enums as payload types
-- do not collapse observation naming with metric naming
+Naming freeze:
+- packet = write-side envelope only
+- control = write-side non-packet control only
+- observation = read-side status or event only
+- metric = read-side numeric or budget frame only
+- verdict = decision only
+- ref = opaque read projection only
+- handle = opaque live token only
+- artifact ref = opaque generated-product token only

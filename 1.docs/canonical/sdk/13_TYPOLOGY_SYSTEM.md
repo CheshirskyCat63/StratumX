@@ -1,22 +1,29 @@
 # Typology System
 
-## Closed owned-data typology
-- packet boundary envelopes
-- control boundary envelopes
-- observation boundary envelopes
-- metric boundary envelopes
-- version facts
-- capability facts
-- profile facts
-- compatibility verdicts
-- transport-policy refs
-- legality-gate verdicts
-- session handles
-- object handles
-- runtime-surface handles
-- identity refs
-- state refs
+L5 is split by data class, not by feature fantasy.
 
-## One-data-kind law
-Each level owns exactly one owned data kind from the closed typology above.
-No level may absorb a second owned data kind merely because it is adjacent or convenient.
+## Mutation-oriented classes
+- command packets
+- binding controls
+- execution signals
+
+## Read-oriented classes
+- observation records
+- metric frames
+
+## Decision classes
+- compatibility facts
+- compatibility verdicts
+- legality verdicts
+- transport policies
+
+## Opaque classes
+- handles
+- refs
+- artifact refs
+
+## Cost rationale
+Mutation-oriented classes stay narrow and ordered.
+Read-oriented classes stay fanout-friendly.
+Decision classes stay pure and replayable.
+Opaque classes stay pointer-free and data-light.

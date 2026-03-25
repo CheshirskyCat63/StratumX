@@ -1,8 +1,19 @@
-# L6.F2 Level
+# Family Level
 
-Canonical layer: `scene_family`
+Canonical family: `scene_family`
 
-Exists to own exactly one tooling role: scene family composition.
-Core data classes: placement lane, transform lane, grouping lane, hierarchy lane.
-It explicitly does not own: world truth, runtime ownership, build/package logic.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- scene graph authoring, entity grouping, scene views, and scene manifests
+
+## Data responsibility
+- authority-facing minimal truth: scene edit intents and scene root refs
+- snapshot classes: scene snapshots
+- index classes: scene/spatial lookup indices
+- derived classes: derived scene views
+- artifact classes: scene artifacts and manifests
+- preview classes: scene previews
+- cache classes: scene caches
+- diagnostics classes: scene diagnostics
+- degradation priority: `high`
+
+This family composes canonical planes and sidecars without owning hidden truth.

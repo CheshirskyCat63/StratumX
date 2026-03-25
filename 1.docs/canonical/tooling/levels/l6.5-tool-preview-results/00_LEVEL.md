@@ -1,8 +1,15 @@
-# L6.5 Level
+# tool_preview_results Level
 
 Canonical layer: `tool_preview_results`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: preview result refs.
-Core data classes: preview_result_id, preview_output_ref, preview_status, preview_diagnostic_refs.
-It explicitly does not own: request creation, scene editing, engine control.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- preview result refs, preview summaries, and preview-facing views
+
+## Parent runtime
+- preview_runtime
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

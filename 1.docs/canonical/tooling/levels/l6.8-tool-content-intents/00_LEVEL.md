@@ -1,8 +1,15 @@
-# L6.8 Level
+# tool_content_intents Level
 
 Canonical layer: `tool_content_intents`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: content workflow intents.
-Core data classes: ImportContentIntent, RebindContentIntent, TagContentIntent, GroupContentIntent, ChunkAssignIntent.
-It explicitly does not own: content truth, execution, preview ownership, import runtime.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- typed content intents only
+
+## Parent runtime
+- command_envelopes
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

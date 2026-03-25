@@ -1,8 +1,19 @@
-# L6.F0 Level
+# Family Level
 
-Canonical layer: `editor_shell_family`
+Canonical family: `editor_shell_family`
 
-Exists to own exactly one tooling role: shell composition.
-Core data classes: shell frame, command bar, panel docking, view host, theme tokens.
-It explicitly does not own: content browsing, diagnostics truth, build execution, project truth.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- shell composition, command bar, view hosting, docking, and editor frame routing
+
+## Data responsibility
+- authority-facing minimal truth: minimal shell authority refs only
+- snapshot classes: shell snapshots and panel/view composition snapshots
+- index classes: panel/view lookup indices
+- derived classes: derived shell layouts and command routing views
+- artifact classes: theme/style and editor-frame artifacts when deterministic
+- preview classes: shell previews are optional and disposable
+- cache classes: shell/UI caches only
+- diagnostics classes: shell diagnostics and host diagnostics
+- degradation priority: `low`
+
+This family composes canonical planes and sidecars without owning hidden truth.

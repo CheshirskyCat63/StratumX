@@ -1,3 +1,5 @@
 # StratumX L6 Dependency Constitution
 
-All L6 dependencies flow through L5. Direct engine imports from L6 are forbidden. Family layers may compose lanes but may not bypass lane contracts.
+`L6` depends downward on `L5` only.
+`L6` may not take dependency on assistant planning, studio orchestration, or engine internals for hidden authority.
+`L6` may receive requests from upper layers, but it never delegates away editor mutation ownership.

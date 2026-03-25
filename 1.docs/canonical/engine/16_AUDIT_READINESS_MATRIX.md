@@ -28,6 +28,7 @@ This document records whether the engine canonical package is ready for implemen
 | benchmark reproducibility and backend/capture-sheet/result/compiler binding coverage | pass | `ROOT-017`, `EVID-ROOT-017` |
 | numeric source-of-truth governance and validator-artifact/source-digest/result coverage | pass | `ROOT-018`, `EVID-ROOT-018` |
 | package evidence/readiness alignment | pass | `ROOT-019`, `EVID-ROOT-019` |
+| `L4` external bridge export closure | pass | `ROOT-020`, `EVID-ROOT-020` |
 
 ## Rule
 

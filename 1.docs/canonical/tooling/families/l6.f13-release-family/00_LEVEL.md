@@ -1,8 +1,19 @@
-# L6.F13 Level
+# Family Level
 
-Canonical layer: `release_family`
+Canonical family: `release_family`
 
-Exists to own exactly one tooling role: release family composition.
-Core data classes: build lane, package lane, deploy lane, test lane, artifact lane.
-It explicitly does not own: build execution law, package authority, engine boundary law.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- release views, release packaging oversight, and release evidence presentation
+
+## Data responsibility
+- authority-facing minimal truth: release request intents only
+- snapshot classes: release snapshots
+- index classes: release lookup indices
+- derived classes: derived release views
+- artifact classes: release artifacts and manifests
+- preview classes: release previews
+- cache classes: release caches
+- diagnostics classes: release diagnostics
+- degradation priority: `high`
+
+This family composes canonical planes and sidecars without owning hidden truth.

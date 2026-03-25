@@ -1,12 +1,4 @@
 # StratumX SDK L5 Non-Interference Law
 
-L5 must not absorb:
-- editor workflow state
-- preview state
-- content import state
-- assistant state
-- release/product state
-- engine execution logic
-- engine scheduler logic
-
-Any such absorption is a package-level blocker.
+L5 may not interfere with engine truth ownership below or editor truth ownership above.
+No hidden store, queue, cache, or planner may appear inside the bridge.

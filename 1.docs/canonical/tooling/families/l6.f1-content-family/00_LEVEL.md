@@ -1,8 +1,19 @@
-# L6.F1 Level
+# Family Level
 
-Canonical layer: `content_family`
+Canonical family: `content_family`
 
-Exists to own exactly one tooling role: content family composition.
-Core data classes: asset browser lane, tag lane, collection lane, reference lane, import/export lane.
-It explicitly does not own: content truth, engine internals, global polling.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- content browser, content refs, content authoring views, and content manifests
+
+## Data responsibility
+- authority-facing minimal truth: minimal content author refs and edit intents
+- snapshot classes: content snapshots
+- index classes: content lookup indices
+- derived classes: content-derived listings and filtered views
+- artifact classes: content manifests and compile-ready content artifacts
+- preview classes: content previews
+- cache classes: content caches
+- diagnostics classes: content diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

@@ -1,8 +1,19 @@
-# L6.F9 Level
+# Family Level
 
-Canonical layer: `vfx_family`
+Canonical family: `vfx_family`
 
-Exists to own exactly one tooling role: effect family composition.
-Core data classes: effect graph lane, emitter lane, event-effect lane, fluids lane.
-It explicitly does not own: simulation truth, audio authority, content truth.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- VFX authoring, effect graphs, effect views, and VFX manifests
+
+## Data responsibility
+- authority-facing minimal truth: VFX edit intents
+- snapshot classes: VFX snapshots
+- index classes: VFX lookup indices
+- derived classes: derived VFX views
+- artifact classes: VFX artifacts and manifests
+- preview classes: VFX previews
+- cache classes: VFX caches
+- diagnostics classes: VFX diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

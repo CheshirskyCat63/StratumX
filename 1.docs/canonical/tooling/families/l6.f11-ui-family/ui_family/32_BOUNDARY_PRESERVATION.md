@@ -1,6 +1,4 @@
 # Boundary Preservation
 
-Local anti-drift law:
-must not absorb editor shell or runtime UI law
-
-Convenience merges with adjacent layers are forbidden even if they appear to reduce file count or call count.
+This family may compose views, diagnostics, and requests around canonical planes.
+It may not create hidden truth, hidden cache ownership, or direct engine shortcuts.

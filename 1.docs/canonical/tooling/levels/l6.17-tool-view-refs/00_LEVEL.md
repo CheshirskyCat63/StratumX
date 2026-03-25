@@ -1,8 +1,15 @@
-# L6.17 Level
+# tool_view_refs Level
 
 Canonical layer: `tool_view_refs`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: view refs.
-Core data classes: view_id, view_kind, view_binding_ref, view_mode_flags.
-It explicitly does not own: data ownership, rendering logic, workflow logic, panel layout.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- view refs and view host routing only
+
+## Parent runtime
+- workspace_runtime
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

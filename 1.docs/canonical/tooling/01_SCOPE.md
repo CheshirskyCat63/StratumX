@@ -1,29 +1,18 @@
 # Scope
 
-This package covers only L6.
+This package defines the upper tools stack above SDK L5.
+It freezes:
+- `L6` as the only editor authority owner
+- `L6A` as the only assistant runtime bridge
+- `L7` as cold studio orchestration and governance
+- `L7A` as cold assistant planning and reasoning
+- plane-separated data flow for authoring, preview, build, release, and diagnostics
+- role, rights, and dependency law for all upper-stack layers
+- memory, GPU, disk, and degradation discipline
+- freeze conditions, testing classes, evidence expectations, and implementation handoff
 
-L6 includes:
-- tooling conveyor core;
-- activation law;
-- observation and projection lanes;
-- intent and task lanes;
-- panel and view attachment refs;
-- tool families composed over lanes.
-
-L6 excludes:
-- engine truth, runtime law, world authority, simulation authority;
-- SDK compatibility, startup legality, packet submission, boundary law;
-- product-specific game logic or product-owned content law.
-
-L6 may consume:
-- typed observations from `L5.1 link_egress`;
-- typed compatibility-safe refs and intents from L5;
-- engine session handles surfaced through L5.
-
-L6 may publish:
-- typed workflow intents;
-- typed task requests;
-- typed projections and read models;
-- typed panel/view attachment refs.
-
-L6 is not an editor monolith. L6 is a composition of thin lanes and tool families.
+This package does not define:
+- engine internals
+- L5 bridge internals
+- runtime simulation truth inside the engine
+- model weights or model-vendor specifics

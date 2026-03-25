@@ -1,15 +1,4 @@
-# release_family
+# Layer
 
-Role class: family composition
-
-Canonical role:
-compose build, package, deploy, test, and artifact workflows.
-
-One data kind law:
-This layer owns only release family composition.
-
-Minimal operational meaning:
-routes release lanes only
-
-Forbidden drift:
-build execution law, package authority, engine boundary law.
+Canonical family layer: `release_family`.
+The family composes editor/runtime clients around canonical planes and never replaces plane ownership.

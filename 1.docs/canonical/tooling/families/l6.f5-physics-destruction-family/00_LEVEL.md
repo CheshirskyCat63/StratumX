@@ -1,8 +1,19 @@
-# L6.F5 Level
+# Family Level
 
-Canonical layer: `physics_destruction_family`
+Canonical family: `physics_destruction_family`
 
-Exists to own exactly one tooling role: physics and destruction family composition.
-Core data classes: fracture lane, cluster lane, break-rule lane, debris lane, impact-response lane.
-It explicitly does not own: engine simulation law, runtime scheduler, world truth.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- physics/destruction authoring, structural constraints, and destruction diagnostics
+
+## Data responsibility
+- authority-facing minimal truth: physics/destruction edit intents
+- snapshot classes: physics snapshots
+- index classes: physics lookup indices
+- derived classes: derived physics views
+- artifact classes: physics artifacts and manifests
+- preview classes: physics previews
+- cache classes: physics caches
+- diagnostics classes: physics diagnostics
+- degradation priority: `high`
+
+This family composes canonical planes and sidecars without owning hidden truth.

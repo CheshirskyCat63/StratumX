@@ -1,13 +1,8 @@
-# Result, Artifact, and Verdict Separation
+# Result, Artifact, Verdict Separation
 
-## Canonical rule
-L5 thin bridge owns verdicts only.
-L5 thin bridge does not own artifacts.
-L5 thin bridge does not own workflow results.
+A result is the outcome of an operation.
+An artifact is a deterministic generated product.
+A verdict is a decision about admissibility or legality.
 
-## Why this matters
-Artifacts and workflow results belong to higher orchestration layers.
-Compatibility verdicts and legality gates belong to L5 because they constrain boundary passage, not editor workflows.
-
-## Consequence
-Any proposal to add artifacts, preview outputs, generated deltas, task results, or release results to L5 is non-canonical and must be rejected.
+These three classes must never be merged into one payload type.
+Merging them causes cache poisoning, replay ambiguity, and bad ownership inference.

@@ -1,7 +1,8 @@
 # StratumX Canonical SDK L5 Index
 
-This package defines the canonical thin L5 runtime truth bridge above engine L4 and below editor/tooling L6.
-It is intentionally small, typed, non-UI, non-product, and non-editor.
+This package defines the canonical thin bridge between engine L4 and the upper tools stack.
+L5 is frozen as a **compiled boundary substrate**, not as editor state, not as assistant runtime, and not as orchestration.
+The package is explicitly data-oriented: every exported class is separated by mutation cost, replay rules, ownership rules, and memory pressure profile.
 
 ## Reading order
 1. `01_SCOPE.md`
@@ -34,50 +35,36 @@ It is intentionally small, typed, non-UI, non-product, and non-editor.
 28. `28_PACKET_AND_OBSERVATION_NAMING.md`
 29. `29_DOCUMENT_AUTHORITY_ORDER.md`
 30. `30_EVIDENCE_REGISTRY.md`
-31. constitutions
-32. per-level docs
-33. per-layer contracts
-34. `99_AUDIT_READINESS_MATRIX.md`
+31. `31_ENGINE_L4_BINDING_MAP.md`
+32. `32_L5_INTERNAL_CONTRACT_MODEL.md`
+33. `33_HANDLE_AND_REF_OPACITY_LAW.md`
+34. `34_L5_TO_TOOLS_CONSUMPTION_MAP.md`
+35. `35_FORBIDDEN_CONNECTIONS.md`
+36. `36_PHYSICAL_DATA_LAYOUT_MODEL.md`
+37. `37_BATCH_AND_CURSOR_PUBLICATION_MODEL.md`
+38. `38_COMPILED_GATE_PROGRAM_MODEL.md`
+39. `39_SNAPSHOT_ALIGNMENT_WITH_L6.md`
+40. `40_L5_HOT_PATH_ALLOCATION_AND_LOCALITY_LAW.md`
+41. `constitutions/`
+42. `levels/`
+43. `evidence/`
+44. `99_AUDIT_READINESS_MATRIX.md`
 
 ## Canonical rule
-L5 is not editor orchestration.
-L5 is not content import.
-L5 is not preview generation.
-L5 is not assistant planning.
-L5 is not release/product workflow state.
-L5 is not engine law.
-
 L5 owns only:
-- write-side boundary envelopes
-- read-side boundary envelopes
+- ingress packet publication
+- ingress control publication
+- egress observation publication
+- egress metric publication
 - compatibility facts
 - compatibility verdicts
 - transport policies
-- per-action legality gates
-- runtime-facing handles and opaque refs
+- legality gates
+- opaque handles
+- opaque refs
+- opaque artifact refs
+- compiled bridge snapshots
+- ordered ingress lanes
+- immutable egress batches and cursors
 
-## Package guarantees
-This package guarantees:
-- one owned data kind per layer
-- one frozen role class per layer
-- one explicit ref subtype for every handle/ref layer
-- one shared canonical type registry for ids, enums, flags, handles, packet classes, packet payload types, observation classes, observation payload types, metric classes, control kinds, verdicts, and statuses
-- one write-side boundary mesh and one read-side boundary mesh only
-- explicit separation of compatibility truth from legality gating
-- explicit separation of transport policy from boundary publication
-- explicit separation of handles, identities, and state refs
-- explicit per-layer field contracts with requiredness and invariants
-- explicit per-layer dependency, communication, threading, and anti-drift contracts
-- a testing model and an acceptance matrix for mechanical and semantic readiness
-- an authority-order rule that resolves root-doc, constitution, and local-layer conflicts
-
-## Readiness rule
-This package may be treated as a sealed implementation canon only when every blocking row in `27_ACCEPTANCE_MATRIX.md` is marked `pass` and `99_AUDIT_READINESS_MATRIX.md` shows no open blockers.
-
-## Non-goals
-This package does not define:
-- engine internals below public L4 surfaces
-- L6 tool workflows, previews, imports, commands, or AI behavior
-- L7 studio/product semantics
-- UI rendering
-- engine runtime scheduling
+Everything else stays below in engine or above in tools.

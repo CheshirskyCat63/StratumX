@@ -10,15 +10,16 @@ Startup and assembly.
 
 ## Canonical Scope
 
-Bootstrap, profile selection, network role selection, runtime wiring, resource/network service wiring, and tracing initialization.
+Bootstrap, profile selection, network role selection, runtime wiring, resource/network service wiring, tracing initialization, and public `L5` bridge export surface publication.
 
 ## Boundary Rationale
 
-Startup is the highest engine-owned layer because it selects the runtime profile, selects legal roles, wires families and services, and launches execution without becoming part of world truth or runtime law.
+Startup is the highest engine-owned layer because it selects the runtime profile, selects legal roles, wires families and services, publishes the narrow public bridge bind for `L5`, and launches execution without becoming part of world truth or runtime law.
 
 ## Canonical Consumers
 
 - No engine-owned consumer above this layer. This crate terminates at the top of the engine stack.
+- External canonical bridge consumer: `L5` binds only to the public export surfaces published here.
 
 ## Downward Dependencies
 
@@ -57,6 +58,8 @@ See `31_THREADING.md`.
 | Tracing Initialization | Startup tracing and diagnostics initialization. | `43_TRACING_INITIALIZATION.md` |
 | Network Role Selection | Legal network role selection model. | `44_NETWORK_ROLE_SELECTION.md` |
 | Resource Service Wiring | Wiring of runtime resource services. | `45_RESOURCE_SERVICE_WIRING.md` |
+| L5 Bridge Export Surfaces | Public export surfaces published for the external bridge bind. | `46_L5_BRIDGE_EXPORT_SURFACES.md` |
+| L5 Export Epoch And Invalidation | Public bridge epoch and invalidation model. | `47_L5_EXPORT_EPOCH_AND_INVALIDATION.md` |
 
 ## Boundary Preservation
 

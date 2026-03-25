@@ -1,0 +1,33 @@
+# Testing Model
+
+Required test classes:
+- authority isolation tests
+- command schema and target-scope tests
+- transaction determinism tests
+- apply/revert chain tests
+- snapshot immutability tests
+- index rebuild and swap tests
+- derived non-authority tests
+- artifact manifest and invalidation tests
+- stream boundedness tests
+- cache eviction and non-authority tests
+- workspace non-truth tests
+- validation legality tests
+- preview non-authority tests
+- build reproducibility tests
+- release packaging legality tests
+- `L5 -> L6` intake normalization tests
+- `L6A` evidence packing tests
+- `L6A` proposal/lowering tests
+- `L6A` safety gate tests
+- `L6A` apply/revert evidence tests
+- `L6A` model runtime timeout/cancellation tests
+- `L7` campaign boundary tests
+- `L7` governance/freeze tests
+- `L7A` goal normalization tests
+- `L7A` planning IR tests
+- `L7A` canon reasoning tests
+- `L7A` optimization and migration tests
+- `L7A` routing policy tests
+- memory/GPU/disk discipline tests
+- degradation ladder tests

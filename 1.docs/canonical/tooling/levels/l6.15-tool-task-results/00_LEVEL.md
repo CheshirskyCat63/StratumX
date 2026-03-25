@@ -1,8 +1,15 @@
-# L6.15 Level
+# tool_task_results Level
 
 Canonical layer: `tool_task_results`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: task result refs.
-Core data classes: task_result_id, source_task_request_id, result_status, result_refs, diagnostic_refs.
-It explicitly does not own: task scheduling, rendering, session truth, retries.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- task result refs and bounded task result summaries
+
+## Parent runtime
+- L6A and L7 boundaries
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

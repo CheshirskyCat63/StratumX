@@ -1,8 +1,19 @@
-# L6.F8 Level
+# Family Level
 
-Canonical layer: `cinematic_family`
+Canonical family: `cinematic_family`
 
-Exists to own exactly one tooling role: cinematic family composition.
-Core data classes: sequence lane, shot lane, camera lane, playback lane.
-It explicitly does not own: gameplay truth, audio graph authority, render backend ownership.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- timeline authoring, shot views, sequencing, and cinematic manifests
+
+## Data responsibility
+- authority-facing minimal truth: cinematic edit intents
+- snapshot classes: cinematic snapshots
+- index classes: cinematic lookup indices
+- derived classes: derived cinematic views
+- artifact classes: cinematic artifacts and manifests
+- preview classes: cinematic previews
+- cache classes: cinematic caches
+- diagnostics classes: cinematic diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

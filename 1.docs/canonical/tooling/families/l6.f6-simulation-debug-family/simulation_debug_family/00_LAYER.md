@@ -1,15 +1,4 @@
-# simulation_debug_family
+# Layer
 
-Role class: family composition
-
-Canonical role:
-compose causality, replay, state diff, and dependency trace workflows.
-
-One data kind law:
-This layer owns only simulation debug family composition.
-
-Minimal operational meaning:
-routes debug lanes only
-
-Forbidden drift:
-simulation authority, runtime mutation, control law.
+Canonical family layer: `simulation_debug_family`.
+The family composes editor/runtime clients around canonical planes and never replaces plane ownership.

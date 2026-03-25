@@ -1,8 +1,19 @@
-# L6.F11 Level
+# Family Level
 
-Canonical layer: `ui_family`
+Canonical family: `ui_family`
 
-Exists to own exactly one tooling role: UI family composition.
-Core data classes: screen lane, widget lane, style lane, flow lane.
-It explicitly does not own: tooling shell ownership, gameplay truth, rendering backend ownership.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- UI authoring, widget surfaces, UI schemas, and UI manifests
+
+## Data responsibility
+- authority-facing minimal truth: UI edit intents
+- snapshot classes: UI snapshots
+- index classes: UI lookup indices
+- derived classes: derived UI views
+- artifact classes: UI artifacts and manifests
+- preview classes: UI previews
+- cache classes: UI caches
+- diagnostics classes: UI diagnostics
+- degradation priority: `low`
+
+This family composes canonical planes and sidecars without owning hidden truth.

@@ -1,5 +1,6 @@
 # Threading
 
-parallel preview and validation tasks
-
-This concurrency contract is specific to this layer and may not be copy-generalized into unrelated roles.
+Threading law:
+- authority-touch work stays inside the `L6` transaction law
+- snapshot/index/derived/artifact/preview/diagnostics work may parallelize only on immutable or explicit job inputs
+- no family-owned multi-writer truth

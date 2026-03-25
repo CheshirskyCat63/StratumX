@@ -1,6 +1,11 @@
 # Dependencies
 
-Concrete dependency contract:
-depends on selection, preview requests/results, content intents, task requests/results
+Allowed dependencies:
+- canonical `L6` planes relevant to audio_family
+- `L6A` surfaces only when assistant mediation is explicit
+- `L7` and `L7A` surfaces only by explicit compiled-control request
 
-The layer may not widen itself into a registry, scheduler, runtime, authority holder, or adjacent owner layer.
+Forbidden dependencies:
+- direct engine access
+- hidden cross-family truth ownership
+- hidden mutable mirrors of snapshots or artifacts

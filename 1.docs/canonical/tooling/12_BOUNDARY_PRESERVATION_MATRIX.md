@@ -1,32 +1,10 @@
 # Boundary Preservation Matrix
 
-## Absolute separations
-- session != selection
-- selection != focus
-- diagnostics events != diagnostics views
-- preview requests != preview results
-- activation rules != activation state
-- task requests != task results
-- panel refs != view refs
-- lanes != families
-
-## Adjacent anti-collapse law
-- `tool_session` may not absorb selection or diagnostics.
-- `tool_selection` may not absorb inspection or scene operations.
-- `tool_inspection_views` may not absorb edit authority.
-- `tool_preview_requests` may not absorb result ownership.
-- `tool_diagnostics_events` may not absorb view rendering.
-- `tool_activation_rules` may not absorb runtime state.
-- `tool_activation_state` may not absorb rule definition.
-- families may not invent new owner facts outside lanes.
-
-## Matrix
-
-| Layer | Upward Boundary | Downward Boundary | Lateral Boundary | Status |
-|-------|-----------------|-------------------|------------------|--------|
-| tool_session | Defined | Defined | None | pass |
-| tool_selection | Defined | Defined | None | pass |
-| tool_activation_rules | Defined | Defined | None | pass |
-
-## Rule
-All L6 layer boundaries must be explicitly preserved and validated.
+| Boundary | Must preserve | Must not leak |
+|---|---|---|
+| `L5 -> L6` | bridge facts, handles, refs, artifact refs, verdict tables, snapshots, batches, and ingress publication only | engine internals, editor-shaped structs |
+| `L6 -> L6A` | bounded runtime data, evidence inputs, proposal surfaces, apply/revert results | authority ownership, hidden mutable truth |
+| `L6A -> L7A` | bounded goals, bounded context, evidence requests, plan requests, routing requests | raw editor authority state |
+| `L7 -> L6` | compiled campaign bundles, task bundles, governance policies, automation requests | frame-level runtime authority |
+| `L7A -> L6A` | plan bundles, proposal intents, canon constraints, optimization alternatives, migration plans | direct apply ownership |
+| any upper layer -> engine | forbidden around `L5` | all direct engine mutation |

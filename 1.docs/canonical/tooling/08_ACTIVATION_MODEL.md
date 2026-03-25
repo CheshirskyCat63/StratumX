@@ -1,32 +1,27 @@
 # Activation Model
 
-## Core rule
-A tool family may exist without being active.
+Activation is split into four canonical modes.
 
-States:
-- registered
-- dormant
-- woken
-- executing
-- idle
-- disposed
+## Direct mode
+Path: `user/tool -> L6 -> L5 -> engine`
+Use for ordinary deterministic editor actions.
+`L7` and `L7A` stay asleep.
 
-## Activation authority
-- `tool_activation_rules` defines when activation is legal.
-- `tool_activation_state` records whether activation has happened.
-- no family self-activates without rule satisfaction.
+## Assisted mode
+Path: `user/tool -> L6A -> L6 -> L5 -> engine`
+Use for local assistant help that does not require multi-step planning.
+`L7A` may stay asleep.
 
-## Activation triggers
-Allowed triggers include:
-- explicit user command;
-- panel open;
-- view focus;
-- selection kind match;
-- diagnostics subscription request;
-- explicit assistant request;
-- explicit release/build request.
+## Deep-planning mode
+Path: `user/tool -> L7A -> L6A -> L6 -> L5 -> engine`
+Use only for complex multi-step planning, migration, optimization, or canon-constrained work.
 
-## Forbidden activation
-- global polling;
-- hidden background hot loops;
-- speculative activation without user or rule demand.
+## Orchestration mode
+Path: `L7 -> L6 -> L5 -> engine`
+Use for compiled campaigns, workflow graphs, governance-bound runs, or release orchestration.
+
+Activation law:
+- `L6` is the only always-hot editor owner
+- `L6A` is warm and request-driven
+- `L7` and `L7A` are cold and wake only for explicit planning or orchestration work
+- passive reads never create hidden runtime activation

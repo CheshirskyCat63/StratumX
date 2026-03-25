@@ -1,8 +1,15 @@
-# L6.16 Level
+# tool_panel_refs Level
 
 Canonical layer: `tool_panel_refs`
+Activation class: `hot-sidecar`.
 
-Exists to own exactly one tooling role: panel refs.
-Core data classes: panel_id, panel_kind, panel_role, panel_binding_ref.
-It explicitly does not own: layout ownership, rendering, workflow logic.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Owns
+- panel refs and panel routing only
+
+## Parent runtime
+- workspace_runtime
+
+## Never owns
+- editor authority
+- hidden domain truth
+- direct engine access

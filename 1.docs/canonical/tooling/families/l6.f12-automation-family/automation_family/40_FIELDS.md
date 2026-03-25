@@ -1,8 +1,9 @@
-        # Fields
+# Fields
 
-        - `family_id: FamilyId` required.
-- `script_ref: ScriptRef` optional.
-- `batch_plan_ref: BatchPlanRef` optional.
-- `test_suite_refs: TestSuiteRef[]` optional, many.
+- `family_id: FamilyId` required.
+- `family_ref: AutomationFamilyRef` required.
+- `snapshot_ref_set: SnapshotRef[]` optional, many.
+- `artifact_manifest_ref_set: ArtifactManifestRef[]` optional, many.
+- `diagnostics_ref_set: DiagnosticsRef[]` optional, many.
 
-        Cardinality, ownership, and invariants are part of canon.
+Cardinality, ownership, and invariants are part of canon.

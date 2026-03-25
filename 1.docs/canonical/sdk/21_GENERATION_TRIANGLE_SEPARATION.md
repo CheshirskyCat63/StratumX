@@ -1,14 +1,8 @@
 # Generation Triangle Separation
 
-## Canonical rule
-L5 owns none of the generation triangle:
-- generation request
-- generation policy
-- generated delta or artifact
+The canonical generation triangle is:
+- engine runtime generation below L5
+- editor/build generation above L5 in L6
+- assistant planning and proposal generation above L5 in L7A/L6A
 
-## Why
-Generation is editor/tooling orchestration and must remain above the runtime truth bridge.
-
-## Allowed relation
-L5 may gate a concrete boundary action produced by higher layers after generation.
-That does not move generation semantics into L5.
+L5 is not one corner of the triangle. L5 only carries typed signals between corners.

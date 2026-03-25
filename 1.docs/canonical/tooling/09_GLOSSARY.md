@@ -1,18 +1,37 @@
 # Glossary
 
-- **fact**: compact owned state for one lane.
-- **ref**: compact typed reference to an external or separately-owned object.
-- **request**: typed ask for work; not execution itself.
-- **intent**: user- or workflow-originating requested action, still above execution.
-- **event**: typed published observation from below or from a task source.
-- **projection**: derived read-side model built from facts, refs, events, or results.
-- **result ref**: typed reference to the outcome of completed work.
-- **activation rule**: declarative condition under which a family or lane may wake.
-- **activation state**: fact recording actual activation.
-- **panel ref**: typed attachment point for a panel-level UI surface.
-- **view ref**: typed attachment point for a view-level UI surface.
-- **family**: composition of multiple lanes serving one tooling domain.
-- **dormant**: declared but not active and not executing.
-- **disposed**: activation and temporary state released.
-- **fan-in**: many inputs merged into one typed projection or request.
-- **fan-out**: one event source consumed by many readers.
+authority core: tiny single-writer editor truth.
+
+command envelope: canonical mutation request package.
+
+transaction ledger: ordered commit, rollback, apply, and revert truth for editor mutations.
+
+snapshot: immutable versioned read plane.
+
+index: rebuildable lookup plane.
+
+derived projection: disposable non-authority view.
+
+artifact: deterministic generated product with manifest identity and rebuild rules.
+
+stream: bounded forward-only event, metrics, or diagnostics flow.
+
+cache: evictable non-authoritative acceleration storage.
+
+budget runtime: layer that owns cost envelopes, pressure visibility, deny/defer/degrade decisions, and degradation policy enforcement.
+
+context evidence pack: bounded project/editor evidence sent toward assistant runtime or reasoning.
+
+proposal: assistant-suggested change bundle before legal lowering.
+
+lowering: translation from proposal or plan into typed `L6` commands.
+
+campaign bundle: compiled studio orchestration package.
+
+plan bundle: planning output from `L7A` before lowering.
+
+hot spine: always-active ownership path `L5 -> L6`.
+
+warm bridge: request-driven assistant runtime path `L6A`.
+
+cold control spine: planning and orchestration path `L7` and `L7A`.

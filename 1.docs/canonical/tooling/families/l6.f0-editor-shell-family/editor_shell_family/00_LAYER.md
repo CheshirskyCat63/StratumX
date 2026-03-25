@@ -1,15 +1,4 @@
-# editor_shell_family
+# Layer
 
-Role class: family composition
-
-Canonical role:
-compose shell, command, panel, and view lanes into the main tooling host.
-
-One data kind law:
-This layer owns only shell composition.
-
-Minimal operational meaning:
-routes shell-related lanes and adapters
-
-Forbidden drift:
-content browsing, diagnostics truth, build execution, project truth.
+Canonical family layer: `editor_shell_family`.
+The family composes editor/runtime clients around canonical planes and never replaces plane ownership.

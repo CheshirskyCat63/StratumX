@@ -1,8 +1,19 @@
-# L6.F6 Level
+# Family Level
 
-Canonical layer: `simulation_debug_family`
+Canonical family: `simulation_debug_family`
 
-Exists to own exactly one tooling role: simulation debug family composition.
-Core data classes: causality lane, event trace lane, replay lane, state diff lane, dependency graph lane.
-It explicitly does not own: simulation authority, runtime mutation, control law.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- simulation debug views, probes, timeline views, and diagnostic overlays
+
+## Data responsibility
+- authority-facing minimal truth: no domain authority beyond debug-session refs
+- snapshot classes: simulation debug snapshots
+- index classes: simulation debug indices
+- derived classes: derived simulation debug views
+- artifact classes: debug/export artifacts when deterministic
+- preview classes: simulation previews
+- cache classes: debug caches
+- diagnostics classes: simulation diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

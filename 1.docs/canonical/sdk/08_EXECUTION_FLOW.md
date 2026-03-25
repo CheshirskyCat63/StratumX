@@ -1,16 +1,17 @@
 # Execution Flow
 
-## Write-side flow
-1. L6 publishes a typed request.
-2. L5 reads compatibility facts, transport policy, legality gate, and required runtime handles.
-3. L5 emits either a packet envelope or a control envelope through the write-side boundary mesh.
-4. Public L4 consumes the submitted envelope.
+## Write path
+1. upper layer prepares a typed command packet or control
+2. compatibility facts are read from immutable bridge snapshots
+3. compatibility verdicts and legality gates are resolved through compiled lookup tables
+4. transport policy selects admissible publication shape
+5. ingress lane publishes toward engine L4 ordered sinks
 
-## Read-side flow
-1. Public L4 emits observations and metrics.
-2. L5 republishes them immutably through the read-side boundary mesh.
-3. L5 also republishes compatible runtime-facing handles and exported refs upward.
-4. L6 consumes observations, metrics, handles, and refs to build its own projections and workflows.
+## Read path
+1. engine L4 publishes observations, metrics, handles, refs, or artifact refs through public batch or snapshot surfaces
+2. L5 normalizes the publication without semantic widening
+3. immutable batches, cursors, and snapshots are exposed upward by role and by budget class
 
-## Hard rule
-L5 never plans editor work, never performs preview generation, never owns content import, and never owns assistant orchestration.
+## Bridge invariant
+No write path may depend on mutable editor state inside L5.
+No read path may duplicate engine truth into a hidden second mutable store.

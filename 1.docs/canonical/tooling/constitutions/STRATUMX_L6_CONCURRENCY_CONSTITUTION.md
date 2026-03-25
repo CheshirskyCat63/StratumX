@@ -1,3 +1,5 @@
 # StratumX L6 Concurrency Constitution
 
-Single-writer fact lanes, fanout observation lanes, and disposable parallel work are the only canonical concurrency forms in L6.
+Mutable editor truth is single-writer.
+Snapshot, index, derived, artifact, validation, preview, and reporting work may parallelize only around immutable inputs or explicit job products.
+Cross-thread mutation around the transaction ledger is forbidden.

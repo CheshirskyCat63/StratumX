@@ -1,20 +1,31 @@
 # Communication Model
 
-## Core laws
-- facts publish only compact facts;
-- requests publish only typed request envelopes;
-- events publish only typed observation envelopes;
-- projections publish only read-side structures;
-- result refs publish only references to completed work.
+Canonical exchange classes:
+- command envelopes
+- binding controls
+- execution signals
+- transaction admissions
+- transaction results
+- invalidation sets
+- immutable snapshots
+- rebuildable indices
+- derived projections
+- deterministic artifacts and artifact manifests
+- bounded streams
+- bounded caches
+- context evidence packs
+- proposals
+- plan bundles
+- campaign bundles
+- policy bundles
+- pressure frames
+- legality and safety verdicts
+- opaque handles and opaque refs
 
-## Direction rules
-- `tool_diagnostics_events` is read-only from `link_egress`.
-- intent layers are write-only toward SDK work surface or task host.
-- projection layers are read-only from facts, events, and result refs.
-- family layers compose and route but do not mutate adjacent lane truth.
-
-## Fan-in and fan-out
-- fan-in is allowed at projection layers and task requests;
-- fan-out is allowed at diagnostics events and family composition;
-- merge is allowed only into typed projections or typed task plans;
-- no layer may emit opaque blob traffic.
+Communication law:
+- all exchange is typed
+- all hot and warm-path exchange is bounded
+- all mutation exchange is replayable or auditable
+- all ownership transfer is explicit
+- all expensive exchange classes must expose budget class and lifetime class
+- object soup, ad-hoc maps, and hidden shared mutable blobs are forbidden

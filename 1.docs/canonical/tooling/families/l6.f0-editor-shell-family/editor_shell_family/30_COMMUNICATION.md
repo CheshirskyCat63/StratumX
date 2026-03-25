@@ -1,5 +1,13 @@
 # Communication
 
-routes shell-related lanes and adapters
+Canonical exchange classes:
+- typed refs
+- typed intents
+- snapshot handles
+- index handles
+- derived views
+- artifact manifests
+- diagnostics bundles
+- preview requests/results when applicable
 
-Allowed traffic must stay typed. Untyped text channels, opaque blobs, and hidden side channels are forbidden.
+Communication is typed, bounded, and budget-visible.

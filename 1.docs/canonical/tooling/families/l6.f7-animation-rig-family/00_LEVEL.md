@@ -1,8 +1,19 @@
-# L6.F7 Level
+# Family Level
 
-Canonical layer: `animation_rig_family`
+Canonical family: `animation_rig_family`
 
-Exists to own exactly one tooling role: animation and rig family composition.
-Core data classes: rig lane, graph lane, retarget lane, pose lane.
-It explicitly does not own: runtime animation authority, scene truth, cinematic ownership.
-It exists to keep its adjacent layers from collapsing into one mixed layer.
+## Composes
+- rig authoring, rig refs, rig validation, and rig manifests
+
+## Data responsibility
+- authority-facing minimal truth: rig edit intents
+- snapshot classes: rig snapshots
+- index classes: rig lookup indices
+- derived classes: derived rig views
+- artifact classes: rig artifacts and manifests
+- preview classes: rig previews
+- cache classes: rig caches
+- diagnostics classes: rig diagnostics
+- degradation priority: `medium`
+
+This family composes canonical planes and sidecars without owning hidden truth.

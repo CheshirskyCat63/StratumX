@@ -1,51 +1,55 @@
 # Canonical Stack
 
-## L6.A Tooling Conveyor Core
-- `L6.0  tool_session`
-- `L6.1  tool_selection`
-- `L6.2  tool_focus_refs`
-- `L6.3  tool_inspection_views`
-- `L6.4  tool_preview_requests`
-- `L6.5  tool_preview_results`
-- `L6.6  tool_diagnostics_events`
-- `L6.7  tool_diagnostics_views`
-- `L6.8  tool_content_intents`
-- `L6.9  tool_scene_intents`
-- `L6.10 tool_release_intents`
-- `L6.11 tool_assistant_intents`
-- `L6.12 tool_activation_rules`
-- `L6.13 tool_activation_state`
-- `L6.14 tool_task_requests`
-- `L6.15 tool_task_results`
-- `L6.16 tool_panel_refs`
-- `L6.17 tool_view_refs`
+## Execution temperatures
+- **hot spine**: `L5 -> L6`
+- **warm bridge**: `L6A`
+- **cold control spine**: `L7` and `L7A`
 
-## L6.B Tool Families
-- `L6.F0  editor_shell_family`
-- `L6.F1  content_family`
-- `L6.F2  scene_family`
-- `L6.F3  world_family`
-- `L6.F4  material_surface_family`
-- `L6.F5  physics_destruction_family`
-- `L6.F6  simulation_debug_family`
-- `L6.F7  animation_rig_family`
-- `L6.F8  cinematic_family`
-- `L6.F9  vfx_family`
-- `L6.F10 audio_family`
-- `L6.F11 ui_family`
-- `L6.F12 automation_family`
-- `L6.F13 release_family`
-- `L6.F14 assistant_family`
+## L6. Editor core / editor operating layer
+- `L6.0  authority_core`
+- `L6.1  command_envelopes`
+- `L6.2  transaction_ledger`
+- `L6.3  snapshot_plane`
+- `L6.4  index_plane`
+- `L6.5  derived_plane`
+- `L6.6  artifact_plane`
+- `L6.7  stream_plane`
+- `L6.8  cache_plane`
+- `L6.9  budget_runtime`
+- `L6.10 workspace_runtime`
+- `L6.11 validation_runtime`
+- `L6.12 preview_runtime`
+- `L6.13 build_runtime`
+- `L6.14 release_runtime`
+- sidecar tool levels: `l6.0-tool-session` through `l6.17-tool-view-refs`
 
-## Closed typology
-- fact layer
-- ref layer
-- request layer
-- result-ref layer
-- event layer
-- view/projection layer
-- rule layer
-- state layer
-- family composition layer
+## L6A. Assistant runtime / bridge
+- `L6A.0 assistant_sessions`
+- `L6A.1 context_evidence_packs`
+- `L6A.2 proposal_runtime`
+- `L6A.3 lowering_runtime`
+- `L6A.4 safety_gates`
+- `L6A.5 apply_revert_runtime`
+- `L6A.6 assistant_ui_runtime`
+- `L6A.7 model_request_runtime`
 
-A layer may belong to exactly one primary role class.
+## L7. Studio orchestrator / meta layer
+- `L7.0 project_orchestration`
+- `L7.1 content_campaigns`
+- `L7.2 world_campaigns`
+- `L7.3 simulation_campaigns`
+- `L7.4 release_campaigns`
+- `L7.5 automation_meta`
+- `L7.6 governance_meta`
+- `L7.7 reporting`
+
+## L7A. Assistant planner / brain
+- `L7A.0 prompt_understanding`
+- `L7A.1 planning_engine`
+- `L7A.2 canon_reasoner`
+- `L7A.3 generation_planner`
+- `L7A.4 optimization_reasoner`
+- `L7A.5 migration_planner`
+- `L7A.6 model_routing`
+
+Families compose lanes and clients. Families never create hidden truth stores when a canonical plane already exists.

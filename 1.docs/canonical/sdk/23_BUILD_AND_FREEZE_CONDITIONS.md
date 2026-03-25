@@ -1,15 +1,13 @@
-# Build and Freeze Conditions
+# Build And Freeze Conditions
 
-## Document freeze
-This package may be treated as frozen only when:
-- `27_ACCEPTANCE_MATRIX.md` shows every blocking row as `pass`
-- `99_AUDIT_READINESS_MATRIX.md` shows no open blockers
-- `11_PACKAGE_LAYOUT.md` exactly matches the real package
-- `26_SHARED_TYPE_REGISTRY.md` covers every shared type used by every layer
-
-## Implementation freeze
-Code may be treated as conformant only when:
-- every layer has an implementation surface matching its owned data kind
-- no forbidden dependency shortcut exists
-- no forbidden cross-layer mutation exists
-- boundary ordering and fanout rules are mechanically tested
+L5 is frozen only when:
+- all bridge classes are typed and bounded
+- artifact refs are distinct from state refs
+- verdicts are distinct from facts
+- controls are distinct from packets
+- no direct upper-layer truth appears inside L5
+- no hidden cache, graph, or disk store appears inside L5
+- no hot-path publication requires per-envelope heap allocation by default
+- ingress publication, snapshot publication, and egress batch publication are distinct physical planes
+- legality and compatibility hot paths are resolved through declared compiled tables rather than ad-hoc mutable logic
+- every declared level, including `l5.15-engine-artifact-refs`, has complete local layer contracts

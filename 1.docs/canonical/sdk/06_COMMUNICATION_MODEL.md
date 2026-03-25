@@ -1,22 +1,33 @@
 # Communication Model
 
-## Canonical communication surfaces
-- write-side publication: `link_ingress_packets`, `link_ingress_controls`
-- read-side publication: `link_egress_observations`, `link_egress_metrics`
-- fact publication: `compat_versions`, `compat_capabilities`, `compat_profiles`
-- verdict publication: `compat_verdicts`, `legality_gates`
-- handle/ref publication: `engine_session_handles`, `engine_object_handles`, `engine_runtime_handles`, `engine_identity_refs`, `engine_state_refs`
+Canonical bridge classes:
+- command packet
+- binding control
+- execution signal
+- observation record
+- metric frame
+- compatibility fact
+- compatibility verdict
+- transport policy
+- legality verdict
+- opaque handle
+- opaque ref
+- opaque artifact ref
 
-## Communication law
-- write-side boundary publication is ordered and single-owner.
-- read-side boundary publication is immutable fanout.
-- fact publication is low-churn and immutable after publication.
-- verdict and gate publication may evaluate in parallel but publish one immutable answer per evaluated tuple.
-- handle/ref publication is immutable fanout and never embeds editor workflow state.
+Canonical publication forms:
+- ordered ingress sink
+- immutable bridge snapshot
+- immutable egress batch
+- monotonic reader cursor
+- payload ref and anchor record
 
-## Forbidden communication
-- no direct L6-to-L4 communication.
-- no direct L4-to-L6 communication.
-- no direct fact-to-engine submission.
-- no direct handle/ref-to-engine submission.
-- no verdict or gate layer may mutate runtime state.
+Communication law:
+- every class is typed
+- every class is bounded
+- every class has explicit replay rules
+- every class has explicit ownership rules
+- every class has an explicit hot-path allocation policy
+- every write-side publication enters through ordered ingress sinks only
+- every read-side fanout leaves through immutable batches or immutable snapshots only
+
+L5 never publishes raw engine memory, raw pointers, or editor-shaped structs.

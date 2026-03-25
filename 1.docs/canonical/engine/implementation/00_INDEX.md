@@ -3,7 +3,7 @@
 ## Purpose
 
 This package defines implementation-facing order, handoff law, starter compile targets, first live runtime milestone, minimal public contract skeletons, and numeric validator closure artifacts.
-All seven documents in this package are authoritative and part of package-level closure.
+All eight documents in this package are authoritative and part of package-level closure.
 
 ## Reading Order
 
@@ -13,4 +13,5 @@ All seven documents in this package are authoritative and part of package-level 
 4. `STRATUMX_FIRST_HEADLESS_RUNTIME_MILESTONE.md`
 5. `STRATUMX_CRATE_CONTRACT_SKELETONS.md`
 6. `STRATUMX_NUMERIC_VALIDATOR_ARTIFACT.md`
-7. `STRATUMX_NUMERIC_VALIDATOR_RESULT.md`
+7. `STRATUMX_NUMERIC_SOURCE_DIGEST_SET.md`
+8. `STRATUMX_NUMERIC_VALIDATOR_RESULT.md`

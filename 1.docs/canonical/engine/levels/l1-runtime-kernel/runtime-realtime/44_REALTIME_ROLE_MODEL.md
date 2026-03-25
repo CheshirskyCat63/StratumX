@@ -31,7 +31,7 @@ The role does not own transport, world truth, residency, or startup once bootstr
 - using queued frames as a substitute for legal role composition.
 
 
-## Role Matrix
+## Reserve Matrix
 
 | Role | Legal reserve | Illegal reserve |
 |---|---|---|

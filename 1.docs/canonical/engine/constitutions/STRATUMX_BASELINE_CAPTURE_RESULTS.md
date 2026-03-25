@@ -14,21 +14,22 @@ Each capture-result artifact binds:
 - one driver family/posture pair;
 - one power/turbo posture;
 - one compiler/target tuple;
-- one fixture family;
-- one or more baseline ids captured under that exact posture.
+- one or more exact fixture ids; and
+- one or more exact baseline ids captured under that exact posture.
 
 A baseline row is illegal when its capture-sheet id exists but no capture-result artifact is registered here for the same posture.
+No capture-result row in this registry may rely on wildcard, family-only, or prose-only baseline binding.
 
 ## 3. Capture Result Artifacts
 
-| Capture Result ID | Capture Sheet ID | Hardware Floor ID | Backend ID | Driver Family ID | Driver Posture ID | Power Mode ID | Turbo/Boost ID | Compiler / Target Tuple | Fixture Family | Covered baseline ids |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `CR-CMN-CPU-01` | `CS-CMN-CPU-01` | `HF-CMN-CPU-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-OFF-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `lower-stack-traversal-a`, `runtime-kernel-a`, `streaming-locality-a`, `world-apply-a`, `replay-determinism-a`, `service-normalization-a`, `content-transform-a` | `BL-LS-*`, `BL-RT-CONT-01`, `BL-SVC-MEM-01`, `BL-STORAGE-MUT-01`, `BL-REPLAY-CMP-01`, `BL-MODEL-*`, `BL-CONTENT-01` |
-| `CR-INT-60-CPU-01` | `CS-INT-60-CPU-01` | `HF-INT-60-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `runtime-kernel-a`, `streaming-locality-a`, `acoustics-streaming-a`, `startup-assembly-a` | `BL-RT-*` CPU rows, `BL-SVC-*` interactive CPU rows, `BL-AUDIO-INT-01`, `BL-STARTUP-01` |
-| `CR-INT-60-VK-01` | `CS-INT-60-VK-01` | `HF-INT-60-01` | `VK-RT-01` | `DRV-VK-STABLE-01` | `DRV-POSTURE-STABLE-01` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-realtime-a`, `visibility-realtime-a`, `streaming-locality-a` | `BL-REALTIME-INT-01`, `BL-MIXED-REALTIME-INT-01`, `BL-IMG-INT-01`, `BL-SVC-XFER-INT-01` |
-| `CR-LH-60-CPU-01` | `CS-LH-60-CPU-01` | `HF-LH-60-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `streaming-locality-a`, `network-listen-host-a`, `world-apply-a`, `acoustics-streaming-a`, `destruction-heavy-a`, `agent-cycle-a` | `BL-SVC-*-LH-01` CPU rows, `BL-NET-TX-LH-01`, `BL-NET-SYNC-LH-01`, `BL-NET-LAT-LH-01`, `BL-KIN-01`, `BL-FIELD-01`, `BL-AGENT-01`, `BL-AUDIO-LH-01` |
-| `CR-LH-60-VK-01` | `CS-LH-60-VK-01` | `HF-LH-60-01` | `VK-RT-01` | `DRV-VK-STABLE-01` | `DRV-POSTURE-STABLE-01` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-realtime-a`, `visibility-realtime-a`, `streaming-locality-a` | `BL-REALTIME-LH-01`, `BL-MIXED-REALTIME-LH-01`, `BL-IMG-LH-01`, `BL-SVC-XFER-LH-01` |
-| `CR-HD-20-CPU-01` | `CS-HD-20-CPU-01` | `HF-HD-20-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-OFF-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-headless-a`, `network-headless-a`, `world-apply-a`, `streaming-locality-a` | `BL-HEADLESS-01`, `BL-MIXED-HEADLESS-01`, `BL-NET-TX-HD-01`, `BL-NET-SYNC-HD-01`, `BL-NET-LAT-HD-01`, `BL-SVC-*-HD-01` |
+| Capture Result ID | Capture Sheet ID | Hardware Floor ID | Backend ID | Driver Family ID | Driver Posture ID | Power Mode ID | Turbo/Boost ID | Compiler / Target Tuple | Bound Fixture IDs | Bound baseline ids | Stack Marker |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| `CR-CMN-CPU-01` | `CS-CMN-CPU-01` | `HF-CMN-CPU-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-OFF-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `lower-stack-traversal-a`, `runtime-kernel-a`, `streaming-locality-a`, `world-apply-a`, `replay-determinism-a`, `service-normalization-a`, `content-transform-a` | `BL-LS-CORE-01`, `BL-LS-ID-01`, `BL-LS-HANDLE-01`, `BL-LS-LAYOUT-01`, `BL-LS-ACCESS-01`, `BL-LS-REG-01`, `BL-LS-QUERY-01`, `BL-LS-ECS-01`, `BL-LS-SPATIAL-01`, `BL-LS-REGION-01`, `BL-STORAGE-MUT-01`, `BL-LS-MAT-01`, `BL-RT-CONT-01`, `BL-SVC-MEM-01`, `BL-MODEL-INF-01`, `BL-MODEL-GEN-01`, `BL-CONTENT-01`, `BL-REPLAY-CMP-01` | `SX-CANON/1.0.6/STACK-v12` |
+| `CR-INT-60-CPU-01` | `CS-INT-60-CPU-01` | `HF-INT-60-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `runtime-kernel-a`, `streaming-locality-a`, `acoustics-streaming-a`, `startup-assembly-a` | `BL-RT-EMPTY-01`, `BL-RT-MIN-01`, `BL-RT-ORCH-01`, `BL-SVC-STREAM-INT-01`, `BL-SVC-RESID-INT-01`, `BL-AUDIO-INT-01`, `BL-STARTUP-01` | `SX-CANON/1.0.6/STACK-v12` |
+| `CR-INT-60-VK-01` | `CS-INT-60-VK-01` | `HF-INT-60-01` | `VK-RT-01` | `DRV-VK-STABLE-01` | `DRV-POSTURE-STABLE-01` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-realtime-a`, `visibility-realtime-a`, `streaming-locality-a` | `BL-REALTIME-INT-01`, `BL-MIXED-REALTIME-INT-01`, `BL-IMG-INT-01`, `BL-SVC-XFER-INT-01` | `SX-CANON/1.0.6/STACK-v12` |
+| `CR-LH-60-CPU-01` | `CS-LH-60-CPU-01` | `HF-LH-60-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `streaming-locality-a`, `network-listen-host-a`, `acoustics-streaming-a`, `destruction-heavy-a`, `agent-cycle-a` | `BL-SVC-STREAM-LH-01`, `BL-SVC-RESID-LH-01`, `BL-SVC-MEM-LH-01`, `BL-NET-TX-LH-01`, `BL-NET-SYNC-LH-01`, `BL-NET-LAT-LH-01`, `BL-KIN-01`, `BL-FIELD-01`, `BL-AGENT-01`, `BL-AUDIO-LH-01` | `SX-CANON/1.0.6/STACK-v12` |
+| `CR-LH-60-VK-01` | `CS-LH-60-VK-01` | `HF-LH-60-01` | `VK-RT-01` | `DRV-VK-STABLE-01` | `DRV-POSTURE-STABLE-01` | `PWR-PERF-LOCK-01` | `BOOST-LOCKED-ALLCORE-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-realtime-a`, `visibility-realtime-a`, `streaming-locality-a` | `BL-REALTIME-LH-01`, `BL-MIXED-REALTIME-LH-01`, `BL-IMG-LH-01`, `BL-SVC-XFER-LH-01` | `SX-CANON/1.0.6/STACK-v12` |
+| `CR-HD-20-CPU-01` | `CS-HD-20-CPU-01` | `HF-HD-20-01` | `CPU-ONLY` | `DRV-N/A` | `DRV-N/A` | `PWR-PERF-LOCK-01` | `BOOST-OFF-01` | `rustc 1.94.0 / x86_64-pc-windows-msvc` | `mixed-pressure-headless-a`, `network-headless-a`, `world-apply-a`, `streaming-locality-a` | `BL-HEADLESS-01`, `BL-MIXED-HEADLESS-01`, `BL-NET-TX-HD-01`, `BL-NET-SYNC-HD-01`, `BL-NET-LAT-HD-01`, `BL-SVC-STREAM-HD-01`, `BL-SVC-RESID-HD-01`, `BL-SVC-MEM-HD-01`, `BL-SVC-XFER-HD-01` | `SX-CANON/1.0.6/STACK-v12` |
 
 ## 4. Measured Baseline Records
 

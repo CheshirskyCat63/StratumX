@@ -2,6 +2,8 @@
 
 ## External Library Baseline
 
+| Library | Role in `engine_transfer_control` |
+|---|---|
 | `bytemuck` | Transfer-friendly byte casting. |
 | `smallvec` | Small transfer descriptors. |
 | `tracing` | Transfer diagnostics. |

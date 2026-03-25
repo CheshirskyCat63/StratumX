@@ -19,3 +19,14 @@
 - `tool_activation_rules` may not absorb runtime state.
 - `tool_activation_state` may not absorb rule definition.
 - families may not invent new owner facts outside lanes.
+
+## Matrix
+
+| Layer | Upward Boundary | Downward Boundary | Lateral Boundary | Status |
+|-------|-----------------|-------------------|------------------|--------|
+| tool_session | Defined | Defined | None | pass |
+| tool_selection | Defined | Defined | None | pass |
+| tool_activation_rules | Defined | Defined | None | pass |
+
+## Rule
+All L6 layer boundaries must be explicitly preserved and validated.

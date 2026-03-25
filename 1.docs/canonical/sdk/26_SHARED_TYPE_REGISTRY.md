@@ -65,3 +65,17 @@
 
 ## Rule
 No shared type may be invented inside a local layer document.
+
+## Registry
+
+| Type Name | Category | Domain | Status | Description |
+|-----------|----------|--------|--------|-------------|
+| PacketBase | Envelope | link_ingress | frozen | Base packet type for ingress boundary |
+| ObservationBase | Envelope | link_egress | frozen | Base observation type for egress boundary |
+| CompatibilityVerdict | Verdict | compat_verdicts | frozen | Compatibility decision result |
+| LegalityGate | Gate | legality_gates | frozen | Boundary legality check result |
+| HandleBase | Handle | engine_handles | frozen | Opaque runtime handle base |
+| RefBase | Reference | engine_refs | frozen | Opaque reference base |
+
+## Rule
+All shared types must be registered in this table before use across L5 boundaries.

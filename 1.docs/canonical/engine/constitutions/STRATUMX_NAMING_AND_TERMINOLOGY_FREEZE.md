@@ -87,6 +87,10 @@ This document freezes canonical names and terms for the current StratumX engine 
 - visibility hierarchy
 - replay-safe envelope
 
+## 4.2. Frozen Benchmark Terms
+
+- benchmark-common-cpu
+
 ## 5. Canonical Alias Discipline
 
 Historical names may remain only in alias, transition, and preservation maps.
@@ -99,5 +103,3 @@ No document may introduce a competing stack name, crate name, or umbrella term w
 - `03_ROLE_MAP.md`
 - `09_GLOSSARY.md`
 - `13_ALIAS_AND_RENAME_MAP.md`
-
-- benchmark-common-cpu

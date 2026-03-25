@@ -9,6 +9,8 @@
 | runtime family | umbrella term | L1 | `02_CANONICAL_STACK.md` | `engine_runtime`, `engine_runtime_headless`, and `engine_runtime_realtime` taken together. |
 | critical simulation families | umbrella term | L2 | `02_CANONICAL_STACK.md` | `engine_kinetics`, `engine_field`, and `engine_agents` taken together. |
 | service layers | umbrella term | L3.0..L3.2 | `02_CANONICAL_STACK.md` | Model systems, synthesis systems, and resource systems taken together. |
+| runtime resource services | umbrella term | L1.5 | `constitutions/STRATUMX_NAMING_AND_TERMINOLOGY_FREEZE.md` | `engine_stream_control`, `engine_residency_control`, `engine_memory_control`, and `engine_transfer_control` taken together. |
+| network runtime services | umbrella term | L2.5 | `constitutions/STRATUMX_NAMING_AND_TERMINOLOGY_FREEZE.md` | `engine_net_transport`, `engine_net_sync`, and `engine_net_latency` taken together. |
 | world instance | execution term | engine-wide | `constitutions/STRATUMX_EXECUTION_CONSTITUTION.md` | One authoritative `engine_world` instance together with its legal runtime authority and execution context. |
 | runtime authority | execution term | L1 | `constitutions/STRATUMX_EXECUTION_CONSTITUTION.md` | The single active runtime owner permitted to drive one world instance. |
 | degradation decision | operational term | L3 / runtime-facing | `constitutions/STRATUMX_DEGRADATION_POLICY_LAW.md` | Explicit runtime-visible decision that reduces optional service-layer work while preserving canonical law. |
@@ -154,23 +156,14 @@ These are historical literal file names preserved only for migration reading. Th
 | rewindable domain | network term | L2.5 | `constitutions/STRATUMX_NETWORK_QUANTIZATION_AND_REWIND_LAW.md` | Closed domain set that may legally participate in short-history rewind. |
 | visibility hierarchy | synthesis term | L3.1 | `constitutions/STRATUMX_RENDER_VISIBILITY_AND_TRANSFER_LAW.md` | Hierarchy-aware culling structure used to bound image synthesis cost. |
 | replay-safe envelope | determinism term | L3.0 / engine-wide | `constitutions/STRATUMX_REPLAY_AND_DETERMINISM_CONSTITUTION.md` | Typed output form that is either deterministic itself or explicitly excluded from deterministic world mutation. |
-## Added in v12 and performance-hardening revisions
 
-- `runtime resource services` — canonical umbrella term for `engine_stream_control`, `engine_residency_control`, `engine_memory_control`, and `engine_transfer_control`.
-- `network runtime services` — canonical umbrella term for `engine_net_transport`, `engine_net_sync`, and `engine_net_latency`.
-- `stream activation` — runtime decision to raise or drop a world cell/chunk into the active working set.
-- `residency` — canonical term for CPU/GPU presence state of runtime-ready resources.
-- `transfer control` — canonical term for decode, staging, upload, and fence-bound release orchestration.
-- `prediction` — local speculative execution over owned inputs while preserving server authority.
-- `reconciliation` — ordered correction of predicted local state after authoritative confirmation.
-- `rewind` — short-history authoritative reconstruction used for validation without replacing world truth ownership.
+## Operational Terms
 
-- `traversal plan` — compiled, cacheable execution descriptor for one legal query signature.
-- `dense execution handle` — internal dense token legal only inside one compiled traversal lane or batch.
-- `simulation tier` — canonical fidelity and cadence class.
-- `segmented apply` — authoritative region- or island-scoped apply instead of monolithic whole-world integrate.
-- `residency hysteresis` — anti-oscillation rule for hot/warm/cold transitions.
-- `quantization class` — canonical sync field encoding class.
-- `rewindable domain` — domain legally eligible for short-history rewind.
-- `visibility hierarchy` — hierarchy-aware visibility structure for synthesis cost control.
-- `replay-safe envelope` — typed service-layer output that is safe for deterministic authority or explicitly excluded.
+| Term | Class | Scope | Canonical Document | Meaning |
+|---|---|---|---|---|
+| stream activation | resource term | L1.5 | `levels/l1.5-runtime-resource-services/stream-control/40_STREAM_ACTIVATION.md` | Runtime decision to raise or drop a world cell/chunk into the active working set. |
+| residency | resource term | L1.5 | `constitutions/STRATUMX_MEMORY_AND_RESIDENCY_CONSTITUTION.md` | Canonical CPU/GPU presence state of runtime-ready resources. |
+| transfer control | resource term | L1.5 | `levels/l1.5-runtime-resource-services/transfer-control/00_LAYER.md` | Decode, staging, upload, and fence-bound release orchestration. |
+| prediction | network term | L2.5 | `levels/l2.5-network-runtime-services/net-latency/41_PREDICTION_AND_RECONCILIATION.md` | Local speculative execution over owned inputs while preserving server authority. |
+| reconciliation | network term | L2.5 | `levels/l2.5-network-runtime-services/net-latency/41_PREDICTION_AND_RECONCILIATION.md` | Ordered correction of predicted local state after authoritative confirmation. |
+| rewind | network term | L2.5 | `constitutions/STRATUMX_NETWORK_QUANTIZATION_AND_REWIND_LAW.md` | Short-history authoritative reconstruction used for validation without replacing world truth ownership. |

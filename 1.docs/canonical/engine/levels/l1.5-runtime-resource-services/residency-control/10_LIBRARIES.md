@@ -2,6 +2,8 @@
 
 ## External Library Baseline
 
+| Library | Role in `engine_residency_control` |
+|---|---|
 | `bitflags` | Residency flags. |
 | `smallvec` | Compact residency sets. |
 | `tracing` | Residency diagnostics. |

@@ -2,6 +2,8 @@
 
 ## External Library Baseline
 
+| Library | Role in `engine_net_sync` |
+|---|---|
 | `serde` | Snapshot and delta serialization descriptors. |
 | `bitflags` | Sync flags. |
 | `smallvec` | Compact sync batches. |

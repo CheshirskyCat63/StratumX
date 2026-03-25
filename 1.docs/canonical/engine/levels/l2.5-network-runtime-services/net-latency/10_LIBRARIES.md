@@ -2,6 +2,8 @@
 
 ## External Library Baseline
 
+| Library | Role in `engine_net_latency` |
+|---|---|
 | `bitflags` | Latency-control flags. |
 | `smallvec` | Compact history and correction buffers. |
 | `tracing` | Latency diagnostics. |

@@ -1,9 +1,11 @@
 # StratumX Editor Domain Suite Constitution
 
-Domain suites are warm-on-demand product strata for specialized authoring.
-They are not mini-editors with private truth.
+Domain suites provide broad universal authoring power above lower-stack truth.
+They may be rich, visual, and workflow-heavy.
+They may not become project-specific game packs.
 
 ## Laws
-- every suite declares its views, tools, previews, diagnostics, and artifact classes
-- every suite consumes lower-stack families and product shell services
-- suites may add context but may not bypass authority
+- suites define universal authoring surfaces only
+- suites may create views, contexts, previews, diagnostics, and request forms
+- suites may not own lower-stack truth
+- suites may not encode project-specific lore or runtime taxonomy

@@ -3,14 +3,27 @@
 Canonical layer: `audio_voice_authoring_suite`
 Activation class: `warm-suite`.
 
+## Role
+audio voice authoring suite is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
+
 ## Owns
-- sound cues, buses, spatial zones, subtitle/voice authoring, and acoustic previews
+- audio emitter placement views, voice set surfaces, subtitle and routing previews, audio diagnostics
 
 ## Consumes
-- audio/acoustics families and diagnostics
+- audio projections, viewport/world context, validation hooks
 
 ## Emits
-- audio authoring requests
+- audio/voice edit requests, routing requests, preview requests
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- runtime audio truth
+- audio truth

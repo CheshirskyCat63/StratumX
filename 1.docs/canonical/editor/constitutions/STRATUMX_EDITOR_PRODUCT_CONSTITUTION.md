@@ -9,3 +9,4 @@ It may never own lower-stack truth.
 - all product surfaces are request/view surfaces
 - suite breadth is encouraged; hidden truth duplication is forbidden
 - closed views and inactive suites are cold
+- the editor package remains universal and may not encode project-specific game taxonomy

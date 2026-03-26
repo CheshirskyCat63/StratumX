@@ -1,19 +1,22 @@
-# Family Level
+# world_scene_family Family
 
-Canonical family: `world_scene_family`
+Canonical family: `world_scene_family`.
 
-## Composes
-- world, scene, partition, placement, grouping, and residency authoring suites
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: world/scene authority refs only
-- snapshot classes: world and scene suite snapshots
-- index classes: world/scene indices
-- derived classes: derived world authoring views
-- artifact classes: world authoring artifacts
-- preview classes: world previews
-- cache classes: suite caches only
-- diagnostics classes: world and scene diagnostics
-- degradation priority: `high`
+## Owns
+- world, scene, and entity authoring suites
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- world and scene projections, viewport, inspector
+
+## Emits
+- world/scene/entity requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- world or entity truth

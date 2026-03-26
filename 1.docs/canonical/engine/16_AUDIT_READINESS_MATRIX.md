@@ -3,32 +3,41 @@
 ## Purpose
 
 This document records whether the engine canonical package is ready for implementation handoff as a document package.
+It is not self-certifying: each row must reference acceptance rows and evidence IDs with active artifacts.
 
 ## Matrix
 
-| Readiness Item | Status | Canonical Basis |
-|---|---|---|
-| package registered coverage closure | pass | `14_ACCEPTANCE_MATRIX.md` registered coverage set passes |
-| stack, level, role, and glossary identity alignment | pass | ROOT-001, EVID-ROOT-001 |
-| dependency legality closure | pass | `ROOT-002`, `EVID-ROOT-002` |
-| runtime phase closure | pass | `ROOT-003`, `EVID-ROOT-003` |
-| repository/package alignment | pass | `ROOT-004`, `EVID-ROOT-004` |
-| startup-mediated content/runtime-pack relation | pass | ROOT-005, EVID-ROOT-005 |
-| implementation-order legality | pass | `ROOT-006`, `EVID-ROOT-006` |
-| API-law to skeleton legality | pass | `ROOT-007`, `EVID-ROOT-007` |
-| package closure docs registered | pass | `ROOT-008`, `EVID-ROOT-008` |
-| implementation handoff clarity | pass | `ROOT-009`, `EVID-ROOT-009` |
-| performance proof coverage, benchmark-gate completeness, naming legality, capture-sheet/result completeness, compiler/target binding, mechanical binding, and profile-composition coverage | pass | `ROOT-010`, `EVID-ROOT-010` |
-| declared hardened affected-level explicit coverage mapping and local-tightening registration over the registered affected set | pass | `ROOT-011`, `EVID-ROOT-011` |
-| implementation package closure | pass | `ROOT-012`, `EVID-ROOT-012` |
-| profile-specific memory, residency, and network memory separation | pass | `ROOT-013`, `EVID-ROOT-013` |
-| registered constitutional package explicit coverage mapping and package-truth registration | pass | `ROOT-014`, `EVID-ROOT-014` |
-| registered root package explicit coverage mapping and package-truth registration | pass | `ROOT-015`, `EVID-ROOT-015` |
-| stack-version marker legality | pass | `ROOT-016`, `EVID-ROOT-016` |
-| benchmark reproducibility and backend/capture-sheet/result/compiler binding coverage | pass | `ROOT-017`, `EVID-ROOT-017` |
-| numeric source-of-truth governance and validator-artifact/source-digest/result coverage | pass | `ROOT-018`, `EVID-ROOT-018` |
-| package evidence/readiness alignment | pass | `ROOT-019`, `EVID-ROOT-019` |
-| `L4` external bridge export closure | pass | `ROOT-020`, `EVID-ROOT-020` |
+| Row | Requirement | References Acceptance Row(s) | References Evidence ID(s) | Active Artifact | Status | Notes |
+|-----|-------------|------------------------------|---------------------------|-----------------|--------|-------|
+| ENG-R-001 | Stack/level/role/glossary identity alignment | ROOT-001 | EVID-ROOT-001 | `02_CANONICAL_STACK.md`, `03_ROLE_MAP.md`, `09_GLOSSARY.md` | pass | Identity alignment verified |
+| ENG-R-002 | Dependency legality closure | ROOT-002 | EVID-ROOT-002 | `05_DEPENDENCY_MODEL.md`, local dependency docs | pass | Dependency model verified |
+| ENG-R-003 | Runtime phase closure | ROOT-003 | EVID-ROOT-003 | `08_EXECUTION_FLOW.md`, `constitutions/STRATUMX_EXECUTION_CONSTITUTION.md` | pass | Runtime phase verified |
+| ENG-R-004 | Repository/package alignment | ROOT-004 | EVID-ROOT-004 | `11_PACKAGE_LAYOUT.md`, `constitutions/STRATUMX_WORKSPACE_AND_REPOSITORY_CANON.md` | pass | Repository alignment verified |
+| ENG-R-005 | Startup-mediated content/runtime-pack relation | ROOT-005 | EVID-ROOT-005 | `05_DEPENDENCY_MODEL.md`, `06_COMMUNICATION_MODEL.md` | pass | Content/runtime relation verified |
+| ENG-R-006 | Implementation-order legality | ROOT-006 | EVID-ROOT-006 | `05_DEPENDENCY_MODEL.md`, `implementation/STRATUMX_IMPLEMENTATION_ORDER.md` | pass | Implementation order verified |
+| ENG-R-007 | API-law to skeleton legality | ROOT-007 | EVID-ROOT-007 | `constitutions/STRATUMX_API_CONTRACT_LAW.md`, `implementation/STRATUMX_CRATE_CONTRACT_SKELETONS.md` | pass | API law verified |
+| ENG-R-008 | Package closure docs registered | ROOT-008 | EVID-ROOT-008 | `00_INDEX.md`, `14_ACCEPTANCE_MATRIX.md`, `15_EVIDENCE_REGISTRY.md`, `16_AUDIT_READINESS_MATRIX.md` | pass | Package closure verified |
+| ENG-R-009 | Implementation handoff clarity | ROOT-009 | EVID-ROOT-009 | `implementation/STRATUMX_IMPLEMENTATION_HANDOFF.md` | pass | Handoff verified |
+| ENG-R-010 | Performance proof coverage | ROOT-010 | EVID-ROOT-010 | Performance constitution and baseline artifacts | pass | Performance proof verified |
+| ENG-R-011 | Hardened affected-level coverage | ROOT-011 | EVID-ROOT-011 | Hardened affected coverage matrix | pass | Hardened coverage verified |
+| ENG-R-012 | Implementation package closure | ROOT-012 | EVID-ROOT-012 | `implementation/00_INDEX.md`, numeric validator artifacts | pass | Implementation package verified |
+| ENG-R-013 | Profile-specific memory/residency separation | ROOT-013 | EVID-ROOT-013 | Memory and residency constitutions | pass | Profile separation verified |
+| ENG-R-014 | Constitutional package coverage | ROOT-014 | EVID-ROOT-014 | Constitutional coverage matrix | pass | Constitutional coverage verified |
+| ENG-R-015 | Root package coverage | ROOT-015 | EVID-ROOT-015 | Root package coverage matrix | pass | Root coverage verified |
+| ENG-R-016 | Stack-version marker legality | ROOT-016 | EVID-ROOT-016 | `STACK_VERSION`, baseline artifacts | pass | Version marker verified |
+| ENG-R-017 | Benchmark reproducibility | ROOT-017 | EVID-ROOT-017 | Benchmark protocol and capture artifacts | pass | Benchmark reproducibility verified |
+| ENG-R-018 | Numeric source-of-truth governance | ROOT-018 | EVID-ROOT-018 | Numeric governance artifacts | pass | Numeric governance verified |
+| ENG-R-019 | Acceptance/evidence/readiness alignment | ROOT-019 | EVID-ROOT-019 | `14_ACCEPTANCE_MATRIX.md`, `15_EVIDENCE_REGISTRY.md`, `16_AUDIT_READINESS_MATRIX.md` | pass | Package alignment verified |
+| ENG-R-020 | L4 external bridge export closure | ROOT-020 | EVID-ROOT-020 | L4 startup export surface docs | pass | Bridge export verified |
+| ENG-R-021 | Active test execution evidence | ROOT-021 | EVID-ROOT-021 | `evidence/tests/engine_test_result_posture_v1.md`, `evidence/tests/engine_test_execution_run_v1.md`, `17_TESTING_MODEL.md`, `18_BUILD_AND_FREEZE_CONDITIONS.md` | pass | Executed document-package validation run recorded and aligned |
+
+## Status Legend
+- `pass`: Requirement satisfied, acceptance row is pass, and evidence artifact is active and verified
+- `fail`: Requirement not satisfied, acceptance row is fail, or evidence artifact is stale or contradictory
+
+## Open Blockers
+
+No open blockers.
 
 ## Rule
 

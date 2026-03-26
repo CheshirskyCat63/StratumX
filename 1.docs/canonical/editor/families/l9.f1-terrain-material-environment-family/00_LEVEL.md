@@ -1,19 +1,22 @@
-# Family Level
+# terrain_material_environment_family Family
 
-Canonical family: `terrain_material_environment_family`
+Canonical family: `terrain_material_environment_family`.
 
-## Composes
-- terrain, material, lookdev, weather, and environment suites
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: terrain/material authority refs only
-- snapshot classes: terrain/material/environment snapshots
-- index classes: terrain/material indices
-- derived classes: derived environment authoring views
-- artifact classes: terrain/material/environment artifacts
-- preview classes: suite previews
-- cache classes: suite caches only
-- diagnostics classes: terrain/material/environment diagnostics
-- degradation priority: `high`
+## Owns
+- terrain, lookdev, and environment suites
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- terrain/material/environment projections, preview hooks
+
+## Emits
+- terrain/material/environment requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- terrain/material/environment truth

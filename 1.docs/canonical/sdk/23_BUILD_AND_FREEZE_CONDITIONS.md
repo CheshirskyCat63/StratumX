@@ -11,3 +11,7 @@ L5 is frozen only when:
 - ingress publication, snapshot publication, and egress batch publication are distinct physical planes
 - legality and compatibility hot paths are resolved through declared compiled tables rather than ad-hoc mutable logic
 - every declared level, including `l5.15-engine-artifact-refs`, has complete local layer contracts
+- `27_ACCEPTANCE_MATRIX.md` is full pass
+- `30_EVIDENCE_REGISTRY.md` has no missing evidence rows
+- `99_AUDIT_READINESS_MATRIX.md` has no open blockers
+- active test-result artifact exists with executed test evidence (not just test-class coverage)

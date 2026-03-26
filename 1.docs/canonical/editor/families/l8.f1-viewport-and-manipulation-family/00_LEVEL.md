@@ -1,19 +1,22 @@
-# Family Level
+# viewport_and_manipulation_family Family
 
-Canonical family: `viewport_and_manipulation_family`
+Canonical family: `viewport_and_manipulation_family`.
 
-## Composes
-- viewport hosts, camera controls, gizmos, overlays, and manipulation channels
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: viewport authority refs only
-- snapshot classes: viewport snapshots and visualization states
-- index classes: view mode and overlay indices
-- derived classes: derived culling/overlay views
-- artifact classes: deterministic overlay assets when needed
-- preview classes: disposable visual previews
-- cache classes: viewport UI caches only
-- diagnostics classes: viewport and manipulation diagnostics
-- degradation priority: `medium`
+## Owns
+- viewport hosts, navigation, overlays, gizmos, snapping, and focused manipulation context
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- viewport projections, tool contexts, diagnostics overlays
+
+## Emits
+- manipulation and viewport requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- world truth

@@ -1,16 +1,29 @@
 # playtest_and_capture_operations Level
 
 Canonical layer: `playtest_and_capture_operations`
-Activation class: `cold-session`.
+Activation class: `batch-ops`.
+
+## Role
+playtest and capture operations is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
 
 ## Owns
-- playtest session launcher, bug capture, screenshot/video capture, repro bundles, and telemetry review
+- playtest session controls, capture requests, run catalogs, recording/export surfaces
 
 ## Consumes
-- play/simulate surfaces, diagnostics, and build outputs
+- play/simulate/debug surfaces, diagnostics, collaboration metadata
 
 ## Emits
-- playtest launch/capture requests
+- playtest launch requests, capture requests, export requests
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- simulation truth
+- runtime truth

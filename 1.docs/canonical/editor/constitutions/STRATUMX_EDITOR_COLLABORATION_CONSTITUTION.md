@@ -1,8 +1,9 @@
 # StratumX Editor Collaboration Constitution
 
-Collaboration, review, and production operations are product surfaces above the lower stack.
+Collaboration and review surfaces exist for multi-user and production operations.
+They are surfaces and workflows, not authority owners.
 
 ## Laws
-- annotations, approvals, playtests, and dashboards never become truth authorities
-- collaboration state is traceable and bounded
-- review and approval gates are visible and auditable
+- comments, review markers, approvals, and captures are additive product metadata and legal requests
+- collaboration surfaces may not create hidden world truths
+- approval and review state must remain visible and auditable

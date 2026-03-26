@@ -29,7 +29,7 @@
 | legal restoration decision | startup term | L4 startup | `constitutions/STRATUMX_CANONICAL_SHAPES.md` | Canonically valid startup decision proving one persistence payload may restore into one legal engine assembly. |
 | stack version source | governance term | engine-wide | `constitutions/STRATUMX_STACK_VERSION_SOURCE.md` | Single source of truth for the canonical stack version marker. |
 | runtime-pack inputs | resource term | startup / L1.5 | `05_DEPENDENCY_MODEL.md` | Startup-mediated or externally prepared runtime-pack products consumed by runtime resource services without creating an upward crate dependency into `engine_content`. |
-| canonical consumers | navigation term | layer documents | `levels/**/00_LAYER.md` | Crates or layers that legally consume one canonical crate through dependency, runtime-governed execution, startup wiring, or validated product inputs. |
+| canonical consumers | navigation term | layer documents | `levels/l-1-foundation/core/00_LAYER.md`, `levels/l-0.9-identity/identity/00_LAYER.md`, and all other level-specific `00_LAYER.md` documents | Crates or layers that legally consume one canonical crate through dependency, runtime-governed execution, startup wiring, or validated product inputs. |
 | benchmark-common-cpu | benchmark term | constitutions | `constitutions/STRATUMX_LOCKED_BASELINE_TABLE.md` | Capture-profile identifier for CPU-only common baseline rows that are not presentation-, backend-, or role-sensitive. |
 
 ## Level Entries

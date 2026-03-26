@@ -3,14 +3,27 @@
 Canonical layer: `outliner_system`
 Activation class: `warm-view`.
 
+## Role
+outliner system is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
+
 ## Owns
-- scene/world trees, folder/group presentation, filters, badges, and outliner context actions
+- hierarchy projection, world browser projection, search/filter state, visibility/lock presentation, grouping presentation
 
 ## Consumes
-- snapshot hierarchy views and diagnostics badges
+- snapshot projections, index-backed hierarchy views, selection presentation
 
 ## Emits
-- selection and action requests
+- outliner actions, grouping requests, visibility/lock requests, focus requests
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- authoritative scene graph
+- hierarchy truth

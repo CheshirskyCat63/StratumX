@@ -1,4 +1,4 @@
-# Editor Product Constitutions Index
+# Constitutions Index
 
 - `STRATUMX_EDITOR_PRODUCT_CONSTITUTION.md`
 - `STRATUMX_EDITOR_VIEWPORT_AND_INTERACTION_CONSTITUTION.md`

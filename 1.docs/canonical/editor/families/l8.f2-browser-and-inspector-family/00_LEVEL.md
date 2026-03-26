@@ -1,19 +1,22 @@
-# Family Level
+# browser_and_inspector_family Family
 
-Canonical family: `browser_and_inspector_family`
+Canonical family: `browser_and_inspector_family`.
 
-## Composes
-- content browser, outliner, world browser, details, and inspector surfaces
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: selection and browser authority refs only
-- snapshot classes: browser and inspector snapshots
-- index classes: search/filter and selection indices
-- derived classes: derived property and dependency views
-- artifact classes: thumbnail artifacts and exportable layout artifacts
-- preview classes: preview panes only
-- cache classes: thumbnail and search caches
-- diagnostics classes: browser and inspector diagnostics
-- degradation priority: `medium`
+## Owns
+- outliner, content browser, details/inspector, and metadata-heavy product surfaces
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- snapshot and index projections, diagnostics hints
+
+## Emits
+- focus, reveal, staged edit, and browser requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- authoritative domain state

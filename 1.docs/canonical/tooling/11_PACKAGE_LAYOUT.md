@@ -1,3 +1,4 @@
+
 # Package Layout
 
 ```text
@@ -40,6 +41,13 @@ tooling/
 ├── 35_DEGRADATION_POLICY_MODEL.md
 ├── STACK_VERSION
 ├── constitutions/
-├── levels/
-└── families/
+├── evidence/
+│   ├── root/
+│   ├── layers/
+│   └── tests/
+├── families/
+└── levels/
 ```
+
+The root tree above is authoritative for package-level audit purposes.
+The `evidence/` subtree is summarized at the folder level here; individual active artifacts are declared by `29_DOCUMENT_AUTHORITY_ORDER.md` and `30_EVIDENCE_REGISTRY.md`.

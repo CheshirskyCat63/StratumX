@@ -46,4 +46,4 @@ The following adjuncts are implementation-legal where the owning crate documents
 - seekable zstd pack products beneath `engine_content` and `engine_stream_control`;
 - KTX2/Basis-class GPU-ready texture products beneath `engine_content` and `engine_residency_control`.
 
-Each crate-level `10_LIBRARIES.md` document defines exact role mapping for every dependency.
+Each crate-level libraries document defines exact role mapping for every dependency.

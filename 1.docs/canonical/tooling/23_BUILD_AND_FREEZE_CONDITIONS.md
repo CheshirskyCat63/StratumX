@@ -1,3 +1,4 @@
+
 # Build And Freeze Conditions
 
 The tools stack is frozen only when:
@@ -13,4 +14,10 @@ The tools stack is frozen only when:
 - `L7` remains cold compiled-control only
 - all shortcut paths are denied
 - memory/GPU/disk discipline is explicit
-- acceptance rows and evidence rows for `L6`, `L6A`, `L7`, and `L7A` are closed
+- the active evidence pack is present and authoritative
+- `27_ACCEPTANCE_MATRIX.md` is fully `pass`
+- `99_AUDIT_READINESS_MATRIX.md` contains zero open blockers
+- `24_TESTING_MODEL.md` is closed by the active test-closure artifact
+- active test-result artifact exists with executed test evidence (not just test-class coverage)
+
+Any package revision missing the active evidence pack or the active test-closure artifact is not gold, even if the structural docs look complete.

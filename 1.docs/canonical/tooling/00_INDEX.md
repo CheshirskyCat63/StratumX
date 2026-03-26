@@ -6,9 +6,27 @@ This package defines the canonical upper tools stack above SDK L5:
 - `L7`  studio orchestrator / meta layer
 - `L7A` assistant planner / brain
 
-The stack is frozen around **ownership**, **typed data flow**, **transaction law**, **execution temperature**, and **resource discipline**.
+This package is subordinate to the global canonical umbrella at `../` and operates as the derived-truth and orchestration authority layer (L6, L6A, L7, L7A) within the stack-wide canonical package system.
+
+The stack is frozen around **ownership**, **typed data flow**, **transaction law**, **execution temperature**, **resource discipline**, and an **active evidence pack**.
 It is intentionally anti-monolith, anti-shadow-world, anti-backdoor, anti-unbounded-growth, and explicitly data-oriented.
 The package is designed for very large simulation-heavy worlds, parallel editor work, bounded GPU/RAM/disk growth, and assistant-mediated authoring without authority leakage.
+
+## Global Canon Alignment
+
+This package operates under the authority of:
+- `../05_GLOBAL_AUTHORITY_ORDER.md` - global conflict resolution
+- `../04_GLOBAL_DEPENDENCY_MODEL.md` - legal package dependencies
+- `../03_PACKAGE_ROLE_MAP.md` - tooling as derived-truth and orchestration authority
+- `../09_GLOBAL_BOUNDARY_PRESERVATION_MATRIX.md` - SDK→tooling and tooling→editor boundary rules
+
+Tooling package gold status is necessary but not sufficient for global gold freeze.
+
+## Active Evidence Contour
+
+The active evidence contour for tooling gold closure is **v3**.
+All evidence artifacts are from the v3 contour.
+Previous versions are superseded and non-authoritative.
 
 ## Reading order
 1. `01_SCOPE.md`
@@ -49,7 +67,9 @@ The package is designed for very large simulation-heavy worlds, parallel editor 
 36. `constitutions/`
 37. `levels/`
 38. `families/`
-39. `99_AUDIT_READINESS_MATRIX.md`
+39. `evidence/`
+40. `99_AUDIT_READINESS_MATRIX.md`
+41. `STACK_VERSION`
 
 ## Canonical rule
 - Only `L6` owns editor mutation authority.
@@ -57,3 +77,4 @@ The package is designed for very large simulation-heavy worlds, parallel editor 
 - `L7` owns compiled studio orchestration only. It never becomes frame-level runtime.
 - `L7A` owns reasoning and planning only. It never becomes direct apply authority.
 - Data is separated by plane and by exchange class. Equal data classes must co-reside when they share locality and lifetime. Shadow duplication is forbidden.
+- Acceptance and readiness may claim `pass` only through the active evidence pack declared in `29_DOCUMENT_AUTHORITY_ORDER.md` and `30_EVIDENCE_REGISTRY.md`.

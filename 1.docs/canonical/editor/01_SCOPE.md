@@ -1,22 +1,23 @@
 # Scope
 
-This package defines the editor as a **complete product** and not only as an internal runtime stack.
+The editor canon defines a universal creation platform rather than a project-specific game editor.
+It exists to host a powerful authoring product above the lower tools stack and below project/game specialization.
 
-## Included
-- shell composition
-- viewport and navigation
-- overlays, gizmos, and mode bars
-- content browser, outliner, world browser, details/inspector
-- command palette, shortcuts, workspaces, docking
-- play, simulate, debug, profiling, diagnostics, build, release
-- assistant dock and assistant proposal surfaces
-- domain authoring suites
-- extensibility and production operations
+## In scope
+- shell, panels, workspaces, and product-facing interaction
+- viewport, outliner, content browser, details/inspector, overlays, and command palette
+- universal domain authoring suites such as world, scene, terrain, material/lookdev, destruction, simulation/AI, weather/environment, animation/cinematics, audio/voice, UI/HUD, quest/event/logic, and validation/release
+- editor services such as import/export, graph tooling, automation, scripting, plugin host, templates, and dependency/package handling
+- collaboration, review, approval, playtest, and production-facing surfaces
+- product dataflow, activation, resource discipline, testing, and freeze rules
 
-## Excluded
-- lower-stack truth authority
-- raw engine runtime implementation
-- final game-specific content schemas
+## Out of scope
+- lower-stack transaction authority owned by `L6`
+- lower-stack assistant runtime authority owned by `L6A`
+- lower-stack orchestration authority owned by `L7`
+- lower-stack planning authority owned by `L7A`
+- project-specific lore, game taxonomy, game rules, quest schemas, factions, and concrete game runtime packages
 
-## Product law
-The editor must be able to author a full game project from inside the editor while keeping lower-stack authority clean and bounded.
+## Boundary rule
+The editor canon is universal through `L11`.
+Project and game specialization begins only above this package.

@@ -1,19 +1,22 @@
-# Family Level
+# extension_and_automation_family Family
 
-Canonical family: `extension_and_automation_family`
+Canonical family: `extension_and_automation_family`.
 
-## Composes
-- automation, scripting, hot reload, plugin host, and package services
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: extension authority refs only
-- snapshot classes: extension snapshots
-- index classes: extension indices
-- derived classes: derived extension health and automation views
-- artifact classes: plugin/package artifacts
-- preview classes: none required
-- cache classes: extension caches only
-- diagnostics classes: extension and automation diagnostics
-- degradation priority: `medium`
+## Owns
+- automation, scripting/hot reload, plugin host, presets, and scaffolds
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- service registries, package/dependency service, diagnostics
+
+## Emits
+- extension and automation requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- core authority

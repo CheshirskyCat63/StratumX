@@ -1,4 +1,11 @@
+
 # Implementation Handoff
+
+Implementation is sealed for handoff only when:
+- `27_ACCEPTANCE_MATRIX.md` is fully `pass`
+- `99_AUDIT_READINESS_MATRIX.md` reports zero blockers
+- the active evidence pack declared in `29_DOCUMENT_AUTHORITY_ORDER.md` is present
+- the active test-closure artifact resolves `24_TESTING_MODEL.md`
 
 Implementation should preserve these crate zones:
 - `tools_core_types`
@@ -21,3 +28,4 @@ Mechanical guidance:
 - `tools_assistant_brain` owns goals, plans, canon reasoning, optimization, migration, and routing only
 
 No zone may silently take ownership that belongs to another zone.
+No implementation handoff may bypass acceptance, readiness, or evidence closure.

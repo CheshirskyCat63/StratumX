@@ -1,19 +1,22 @@
-# Family Level
+# command_and_interaction_family Family
 
-Canonical family: `command_and_interaction_family`
+Canonical family: `command_and_interaction_family`.
 
-## Composes
-- palette, shortcuts, interaction routing, context menus, and drag/drop legality
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: command-map refs only
-- snapshot classes: command routing snapshots
-- index classes: shortcut and action indices
-- derived classes: derived command discovery views
-- artifact classes: exportable keymap artifacts
-- preview classes: none required
-- cache classes: command palette caches
-- diagnostics classes: input and routing diagnostics
-- degradation priority: `low`
+## Owns
+- command palette, shortcuts, interaction routing, and mode/context switching
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- shortcut maps, tool contexts, shell hooks
+
+## Emits
+- normalized product intents
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- direct lower-stack mutation

@@ -1,14 +1,33 @@
 # Library Baseline
 
-Allowed classes by layer:
-- `L6`: transaction-safe, snapshot-safe, index-safe, artifact-safe, bounded-stream, bounded-cache, and explicit preview/build/release libraries
-- `L6A`: bounded async model IO, proposal/lowering/safety tooling, and evidence-pack assembly libraries
-- `L7`: campaign scheduling, workflow graph, governance, and reporting libraries
-- `L7A`: planning, routing, reasoning, and structured-output libraries
+## Pinned External Baseline
 
-Library law:
-- no library may silently introduce hidden authority stores
-- no library may introduce unbounded queues or unbounded caches on hot or warm paths
-- no library may create uncontrolled GPU residency or silent disk growth
-- no library may smuggle editor mutation authority around `L6`
-- no library may force intra-process serialization when typed in-memory exchange already exists
+Required across tooling root and level-local surfaces:
+- `serde`
+- `thiserror`
+
+Conditionally allowed only when a root law or local `10_LIBRARIES.md` document explicitly justifies them:
+- `smallvec`
+- `tracing`
+- `crossbeam`
+
+## Forbidden External Classes
+
+- hidden authority stores
+- hidden databases
+- unbounded queues
+- unbounded caches on hot or warm paths
+- uncontrolled GPU residency
+- silent disk growth
+- editor mutation bypasses around `L6`
+- direct engine-internal libraries outside sanctioned `L5` intake surfaces
+
+## Root Freeze Rule
+
+No tooling root or level-local document may introduce an external dependency outside the pinned or conditionally allowed set above without first updating this root baseline.
+
+Tooling libraries may coordinate, derive, validate, preview, build, release, plan, or report. They may not become a second truth owner.
+
+## Version
+
+SX-CANON/1.0.6/STACK-v12 tooling package.

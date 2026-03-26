@@ -1,9 +1,11 @@
 # StratumX Editor Resource Discipline Constitution
 
-The editor product must stay broad without becoming a resource sink.
+The editor may be broad but must remain bounded.
+Hot resources are reserved for focused interaction, active view refresh, and visible critical surfaces.
 
 ## Laws
-- hidden panels do not tick hot
-- inactive suites do not keep heavy caches alive
-- previews, thumbnails, and session traces are bounded and evictable
-- collaboration and review history is paged or windowed
+- inactive suites are cold
+- closed panels are cold
+- heavy work runs in bounded background jobs
+- no hidden always-live subsystems are allowed in the product layer
+- equal product data classes must co-reside by lifetime and invalidation regime

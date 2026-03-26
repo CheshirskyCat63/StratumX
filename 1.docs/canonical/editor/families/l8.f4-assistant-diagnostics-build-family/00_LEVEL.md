@@ -1,19 +1,22 @@
-# Family Level
+# assistant_diagnostics_build_family Family
 
-Canonical family: `assistant_diagnostics_build_family`
+Canonical family: `assistant_diagnostics_build_family`.
 
-## Composes
-- assistant dock, diagnostics surfaces, build/release surfaces, and task monitors
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: assistant/build authority refs only
-- snapshot classes: assistant and diagnostics snapshots
-- index classes: task and artifact indices
-- derived classes: derived proposal/release views
-- artifact classes: task and release report artifacts
-- preview classes: preview task views
-- cache classes: diagnostics caches
-- diagnostics classes: assistant/build/release diagnostics
-- degradation priority: `medium`
+## Owns
+- assistant, diagnostics, and build/release auxiliary surfaces
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- assistant/runtime projections, diagnostics streams, build/release status
+
+## Emits
+- assistant/build/diagnostics requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- assistant runtime or build truth

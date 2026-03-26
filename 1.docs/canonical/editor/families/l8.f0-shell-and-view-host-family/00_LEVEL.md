@@ -1,19 +1,22 @@
-# Family Level
+# shell_and_view_host_family Family
 
-Canonical family: `shell_and_view_host_family`
+Canonical family: `shell_and_view_host_family`.
 
-## Composes
-- shell composition, window chrome, dock host, tab host, and saved workspaces
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: minimal shell authority refs only
-- snapshot classes: shell and view composition snapshots
-- index classes: view lookup indices
-- derived classes: derived layouts and route views
-- artifact classes: theme assets and deterministic UI assets when needed
-- preview classes: optional shell previews only
-- cache classes: shell caches only
-- diagnostics classes: shell and host diagnostics
-- degradation priority: `low`
+## Owns
+- editor shell, workspace layouts, detached hosts, and primary panel/view anchoring
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- shell frame, layout state, panel registries
+
+## Emits
+- view host activation, layout requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- panel truth or domain truth

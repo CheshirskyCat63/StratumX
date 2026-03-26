@@ -1,16 +1,29 @@
 # interaction_routing_system Level
 
 Canonical layer: `interaction_routing_system`
-Activation class: `warm-router`.
+Activation class: `hot-when-focused`.
+
+## Role
+interaction routing system is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
 
 ## Owns
-- shortcut dispatch, command palette routing, drag/drop legality routing, and context menu routing
+- focused interaction routing, priority arbitration, pointer/key/gesture dispatch normalization
 
 ## Consumes
-- focused view, active suite, legal command map
+- viewport focus, tool context, shortcut definitions, command palette hooks
 
 ## Emits
-- routed request envelopes
+- normalized editor intents, focus transitions, route-denied events
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- shadow command systems
+- hidden command execution or direct truth mutation

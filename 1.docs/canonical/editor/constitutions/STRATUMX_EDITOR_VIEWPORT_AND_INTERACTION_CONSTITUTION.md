@@ -1,10 +1,11 @@
 # StratumX Editor Viewport and Interaction Constitution
 
-The viewport is the primary manipulation surface.
-It must remain low-latency and directly controllable.
+The viewport is the dominant interaction surface.
+Focused interaction routing is exclusive.
+Selection presentation is not authority.
 
 ## Laws
-- camera motion and core gizmo manipulation are latency-sensitive
-- overlays may annotate but not stall the viewport
-- selection and edit requests must route through legal lower-stack paths
-- suite-specific modes may extend viewport behavior only through declared tool contexts
+- only one focused manipulator context may own high-priority pointer routing at a time
+- all interactions lower into legal requests rather than mutating truth directly
+- overlays, gizmos, and selection visuals are discardable product state
+- inactive viewports degrade or go cold

@@ -3,14 +3,27 @@
 Canonical layer: `build_validation_release_suite`
 Activation class: `warm-suite`.
 
+## Role
+build validation release suite is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
+
 ## Owns
-- suite-level build profiles, validation dashboards, package composition, and release preparation surfaces
+- validation dashboards, broken-reference surfaces, asset health views, packaging presets, release runbooks
 
 ## Consumes
-- build/release surfaces and diagnostics
+- diagnostics/build/release surfaces, service status, validation results
 
 ## Emits
-- suite-scoped build and validation requests
+- validation scans, build/release requests, checklist requests
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- lower-stack release truth
+- release truth

@@ -11,3 +11,5 @@ Every document must preserve:
 - explicit budget, preview, build, and release separation
 - typed data-flow separation by plane and exchange class
 - bounded memory/GPU/disk usage
+- active evidence-pack closure for acceptance and readiness claims
+- real local contracts for every declared level and family

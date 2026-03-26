@@ -1,16 +1,29 @@
 # production_dashboard_and_traceability Level
 
 Canonical layer: `production_dashboard_and_traceability`
-Activation class: `cold-session`.
+Activation class: `cold-ops`.
+
+## Role
+production dashboard and traceability is the canonical product/service surface for this level.
+It exists above the lower-stack authority layers and may only host views, contexts, services, jobs, or requests appropriate to its role.
 
 ## Owns
-- task boards, milestone dashboards, dependency heatmaps, suite health, and trace links from issue to asset to build
+- dashboards, milestone and asset status surfaces, provenance links, pipeline traceability views
 
 ## Consumes
-- orchestration meta, diagnostics, build data, and collaboration surfaces
+- service status, approval/gate metadata, diagnostics, build/release metadata
 
 ## Emits
-- dashboard filters and drilldown requests
+- report and reveal requests
+
+## Data classes
+- view or service-local state appropriate to this layer
+- activation and visibility state
+- request and result envelopes appropriate to this layer
+
+## Concurrency law
+- focused UI routing remains single-writer where applicable
+- background work may exist only when bounded and visible to diagnostics/budget surfaces
 
 ## Never owns
-- authority truth
+- production truth outside sourced projections

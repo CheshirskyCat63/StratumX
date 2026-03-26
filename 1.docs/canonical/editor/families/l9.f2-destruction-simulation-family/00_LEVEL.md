@@ -1,19 +1,22 @@
-# Family Level
+# destruction_simulation_family Family
 
-Canonical family: `destruction_simulation_family`
+Canonical family: `destruction_simulation_family`.
 
-## Composes
-- destruction, fracture, AI, simulation, and logic suites
+## Role
+This family groups related editor product surfaces or services that share data locality, activation regime, and request/view discipline.
 
-## Data responsibility
-- authority-facing minimal truth: destruction/sim authority refs only
-- snapshot classes: destruction/sim snapshots
-- index classes: destruction/sim indices
-- derived classes: derived authoring and balance views
-- artifact classes: suite build/test artifacts
-- preview classes: heavy previews where disposable
-- cache classes: bounded suite caches
-- diagnostics classes: destruction/sim diagnostics
-- degradation priority: `high`
+## Owns
+- destruction and simulation/AI suites
 
-This family composes editor product surfaces without owning hidden lower-stack truth.
+## Consumes
+- destruction/simulation projections, validation and preview hooks
+
+## Emits
+- destruction/simulation requests
+
+## Family law
+Members of this family cohere by data type, lifetime, and invalidation regime.
+They may share indices, projections, and activation policy where legal.
+
+## Never owns
+- destruction or simulation truth

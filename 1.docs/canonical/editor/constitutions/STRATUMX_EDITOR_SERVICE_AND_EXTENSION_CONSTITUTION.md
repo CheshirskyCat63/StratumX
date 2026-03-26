@@ -1,9 +1,10 @@
 # StratumX Editor Service and Extension Constitution
 
-Services and extensions exist to accelerate project work, import/export, automation, and custom tooling.
+Services and extensibility turn the editor into a platform.
+They remain bounded, legal, and subordinate to lower-stack authority.
 
 ## Laws
-- services are cold or batch activated
-- plugin and extension hosts are capability-scoped
-- import/export and graph systems route results into lower-stack legality paths
-- no extension may gain hidden authority by loading into the editor
+- services own job orchestration, not lower-stack truth
+- extension points are explicit and registry-driven
+- plugin and package systems may extend views, suites, and services but may not bypass authority laws
+- background jobs must be bounded and pressure-visible

@@ -1,8 +1,27 @@
 # StratumX Canonical SDK L5 Index
 
 This package defines the canonical thin bridge between engine L4 and the upper tools stack.
+
+This package is subordinate to the global canonical umbrella at `../` and operates as the data-oriented bridge layer (L5) within the stack-wide canonical package system.
+
 L5 is frozen as a **compiled boundary substrate**, not as editor state, not as assistant runtime, and not as orchestration.
 The package is explicitly data-oriented: every exported class is separated by mutation cost, replay rules, ownership rules, and memory pressure profile.
+
+## Global Canon Alignment
+
+This package operates under the authority of:
+- `../05_GLOBAL_AUTHORITY_ORDER.md` - global conflict resolution
+- `../04_GLOBAL_DEPENDENCY_MODEL.md` - legal package dependencies
+- `../03_PACKAGE_ROLE_MAP.md` - SDK as data-bridge authority
+- `../09_GLOBAL_BOUNDARY_PRESERVATION_MATRIX.md` - engine→SDK and SDK→tooling boundary rules
+
+SDK package gold status is necessary but not sufficient for global gold freeze.
+
+## Active Evidence Contour
+
+The active evidence contour for SDK gold closure is **v12**.
+All evidence artifacts are from the v12 contour.
+Previous versions (v9, v10, v11) are superseded and non-authoritative.
 
 ## Reading order
 1. `01_SCOPE.md`

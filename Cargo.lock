@@ -34,6 +34,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "engine_storage_mutation"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_handle",
+ "engine_storage_layout",
+ "serde",
+ "smallvec",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.106"
 source = "registry+https://github.com/rust-lang/crates.io-index"

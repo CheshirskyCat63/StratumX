@@ -1,0 +1,17 @@
+[package]
+name = "engine_world"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_handle = { path = "../../../l-0.8-handle/handle/engine_handle" }
+engine_ecs = { path = "../../../l-0.2-ecs-assembly/ecs/engine_ecs" }
+engine_world_spatial = { path = "../../../l-0.1-world-spatial/world-spatial/engine_world_spatial" }
+engine_world_region = { path = "../../../l-0.05-world-region/world-region/engine_world_region" }
+serde.workspace = true
+bincode.workspace = true
+glam.workspace = true

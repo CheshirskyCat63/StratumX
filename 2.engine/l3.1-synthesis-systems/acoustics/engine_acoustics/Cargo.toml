@@ -1,0 +1,21 @@
+[package]
+name = "engine_acoustics"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_ecs = { path = "../../../l-0.2-ecs-assembly/ecs/engine_ecs" }
+engine_material = { path = "../../../l0.5-shared-world-properties/material/engine_material" }
+engine_world_spatial = { path = "../../../l-0.1-world-spatial/world-spatial/engine_world_spatial" }
+engine_world_region = { path = "../../../l-0.05-world-region/world-region/engine_world_region" }
+engine_residency_control = { path = "../../../l1.5-runtime-resource-services/residency-control/engine_residency_control" }
+engine_transfer_control = { path = "../../../l1.5-runtime-resource-services/transfer-control/engine_transfer_control" }
+serde.workspace = true
+smallvec.workspace = true
+bitflags.workspace = true
+tracing.workspace = true

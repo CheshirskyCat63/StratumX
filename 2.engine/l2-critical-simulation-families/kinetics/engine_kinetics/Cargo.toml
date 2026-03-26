@@ -1,0 +1,20 @@
+[package]
+name = "engine_kinetics"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_material = { path = "../../../l0.5-shared-world-properties/material/engine_material" }
+engine_world_spatial = { path = "../../../l-0.1-world-spatial/world-spatial/engine_world_spatial" }
+engine_world_region = { path = "../../../l-0.05-world-region/world-region/engine_world_region" }
+engine_runtime = { path = "../../../l1-runtime-kernel/runtime/engine_runtime" }
+engine_memory_control = { path = "../../../l1.5-runtime-resource-services/memory-control/engine_memory_control" }
+smallvec.workspace = true
+serde.workspace = true
+bitflags.workspace = true
+tracing.workspace = true

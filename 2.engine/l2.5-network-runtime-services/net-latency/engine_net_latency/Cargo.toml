@@ -1,0 +1,18 @@
+[package]
+name = "engine_net_latency"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_handle = { path = "../../../l-0.8-handle/handle/engine_handle" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_world_region = { path = "../../../l-0.05-world-region/world-region/engine_world_region" }
+engine_runtime = { path = "../../../l1-runtime-kernel/runtime/engine_runtime" }
+engine_net_transport = { path = "../../net-transport/engine_net_transport" }
+smallvec.workspace = true
+bitflags.workspace = true
+serde.workspace = true

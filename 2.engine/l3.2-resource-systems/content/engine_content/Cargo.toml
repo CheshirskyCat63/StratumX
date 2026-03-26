@@ -1,0 +1,16 @@
+[package]
+name = "engine_content"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_material = { path = "../../../l0.5-shared-world-properties/material/engine_material" }
+engine_world_region = { path = "../../../l-0.05-world-region/world-region/engine_world_region" }
+serde.workspace = true
+thiserror.workspace = true
+smallvec.workspace = true
+tracing.workspace = true

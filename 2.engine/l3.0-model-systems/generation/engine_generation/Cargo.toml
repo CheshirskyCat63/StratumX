@@ -1,0 +1,17 @@
+[package]
+name = "engine_generation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_inference = { path = "../../inference/engine_inference" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+smallvec.workspace = true
+tracing.workspace = true

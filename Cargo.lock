@@ -3,6 +3,36 @@
 version = 3
 
 [[package]]
+name = "addr2line"
+version = "0.25.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b"
+dependencies = [
+ "gimli",
+]
+
+[[package]]
+name = "adler2"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
+
+[[package]]
+name = "backtrace"
+version = "0.3.76"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bb531853791a215d7c62a30daf0dde835f381ab5de4589cfe7c649d2cbe92bd6"
+dependencies = [
+ "addr2line",
+ "cfg-if",
+ "libc",
+ "miniz_oxide",
+ "object",
+ "rustc-demangle",
+ "windows-link",
+]
+
+[[package]]
 name = "bincode"
 version = "1.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -111,6 +141,52 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 
 [[package]]
+name = "engine_acoustics"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_ecs",
+ "engine_material",
+ "engine_residency_control",
+ "engine_transfer_control",
+ "engine_world",
+ "engine_world_region",
+ "engine_world_spatial",
+ "serde",
+ "smallvec",
+ "tracing",
+]
+
+[[package]]
+name = "engine_agents"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_ecs",
+ "engine_memory_control",
+ "engine_runtime",
+ "engine_world",
+ "engine_world_region",
+ "serde",
+ "smallvec",
+]
+
+[[package]]
+name = "engine_content"
+version = "0.1.0"
+dependencies = [
+ "engine_core",
+ "engine_material",
+ "engine_world_region",
+ "serde",
+ "smallvec",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
 name = "engine_core"
 version = "0.1.0"
 dependencies = [
@@ -160,6 +236,35 @@ dependencies = [
 ]
 
 [[package]]
+name = "engine_field"
+version = "0.1.0"
+dependencies = [
+ "engine_core",
+ "engine_material",
+ "engine_memory_control",
+ "engine_runtime",
+ "engine_world",
+ "engine_world_region",
+ "engine_world_spatial",
+ "serde",
+ "smallvec",
+]
+
+[[package]]
+name = "engine_generation"
+version = "0.1.0"
+dependencies = [
+ "engine_core",
+ "engine_inference",
+ "engine_world",
+ "serde",
+ "serde_json",
+ "smallvec",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
 name = "engine_handle"
 version = "0.1.0"
 dependencies = [
@@ -176,6 +281,56 @@ dependencies = [
  "engine_core",
  "serde",
  "slotmap",
+]
+
+[[package]]
+name = "engine_imaging"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "engine_core",
+ "engine_ecs",
+ "engine_material",
+ "engine_residency_control",
+ "engine_transfer_control",
+ "engine_world",
+ "engine_world_region",
+ "engine_world_spatial",
+ "glam",
+ "serde",
+ "smallvec",
+ "tracing",
+]
+
+[[package]]
+name = "engine_inference"
+version = "0.1.0"
+dependencies = [
+ "engine_core",
+ "engine_ecs",
+ "engine_world",
+ "serde",
+ "serde_json",
+ "smallvec",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "engine_kinetics"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_material",
+ "engine_memory_control",
+ "engine_runtime",
+ "engine_world",
+ "engine_world_region",
+ "engine_world_spatial",
+ "serde",
+ "smallvec",
+ "tracing",
 ]
 
 [[package]]
@@ -204,6 +359,49 @@ dependencies = [
  "parking_lot",
  "smallvec",
  "tracing",
+]
+
+[[package]]
+name = "engine_net_latency"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_handle",
+ "engine_net_transport",
+ "engine_runtime",
+ "engine_world",
+ "engine_world_region",
+ "serde",
+ "smallvec",
+]
+
+[[package]]
+name = "engine_net_sync"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_handle",
+ "engine_identity",
+ "engine_net_transport",
+ "engine_runtime",
+ "engine_world",
+ "engine_world_region",
+ "serde",
+ "smallvec",
+]
+
+[[package]]
+name = "engine_net_transport"
+version = "0.1.0"
+dependencies = [
+ "bitflags",
+ "engine_core",
+ "engine_handle",
+ "engine_runtime",
+ "serde",
+ "smallvec",
 ]
 
 [[package]]
@@ -260,6 +458,37 @@ dependencies = [
  "engine_world",
  "smallvec",
  "tracing",
+]
+
+[[package]]
+name = "engine_startup"
+version = "0.1.0"
+dependencies = [
+ "backtrace",
+ "engine_acoustics",
+ "engine_agents",
+ "engine_content",
+ "engine_core",
+ "engine_field",
+ "engine_generation",
+ "engine_imaging",
+ "engine_inference",
+ "engine_kinetics",
+ "engine_memory_control",
+ "engine_net_latency",
+ "engine_net_sync",
+ "engine_net_transport",
+ "engine_residency_control",
+ "engine_runtime",
+ "engine_runtime_headless",
+ "engine_runtime_realtime",
+ "engine_stream_control",
+ "engine_transfer_control",
+ "engine_world",
+ "serde",
+ "serde_json",
+ "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -366,6 +595,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
 
 [[package]]
+name = "gimli"
+version = "0.32.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e629b9b98ef3dd8afe6ca2bd0f89306cec16d43d907889945bc5d6687f2f13c7"
+
+[[package]]
 name = "glam"
 version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -373,6 +608,18 @@ checksum = "9e05e7e6723e3455f4818c7b26e855439f7546cf617ef669d1adedb8669e5cb9"
 dependencies = [
  "serde",
 ]
+
+[[package]]
+name = "itoa"
+version = "1.0.18"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+
+[[package]]
+name = "lazy_static"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 
 [[package]]
 name = "libc"
@@ -400,12 +647,51 @@ dependencies = [
 ]
 
 [[package]]
+name = "log"
+version = "0.4.29"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
+
+[[package]]
+name = "memchr"
+version = "2.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
+
+[[package]]
 name = "mimalloc"
 version = "0.1.48"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e1ee66a4b64c74f4ef288bcbb9192ad9c3feaad75193129ac8509af543894fd8"
 dependencies = [
  "libmimalloc-sys",
+]
+
+[[package]]
+name = "miniz_oxide"
+version = "0.8.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316"
+dependencies = [
+ "adler2",
+]
+
+[[package]]
+name = "nu-ansi-term"
+version = "0.50.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5"
+dependencies = [
+ "windows-sys",
+]
+
+[[package]]
+name = "object"
+version = "0.37.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe"
+dependencies = [
+ "memchr",
 ]
 
 [[package]]
@@ -491,6 +777,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustc-demangle"
+version = "0.1.27"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b50b8869d9fc858ce7266cce0194bd74df58b9d0e3f6df3a9fc8eb470d95c09d"
+
+[[package]]
 name = "scopeguard"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -524,6 +816,28 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "serde_json"
+version = "1.0.149"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86"
+dependencies = [
+ "itoa",
+ "memchr",
+ "serde",
+ "serde_core",
+ "zmij",
+]
+
+[[package]]
+name = "sharded-slab"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f40ca3c46823713e0d4209592e8d6e826aa57e928f09752619fc696c499637f6"
+dependencies = [
+ "lazy_static",
 ]
 
 [[package]]
@@ -583,6 +897,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "thread_local"
+version = "1.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f60246a4944f24f6e018aa17cdeffb7818b76356965d03b07d6a9886e8962185"
+dependencies = [
+ "cfg-if",
+]
+
+[[package]]
 name = "tracing"
 version = "0.1.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -611,6 +934,32 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a"
 dependencies = [
  "once_cell",
+ "valuable",
+]
+
+[[package]]
+name = "tracing-log"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3"
+dependencies = [
+ "log",
+ "once_cell",
+ "tracing-core",
+]
+
+[[package]]
+name = "tracing-subscriber"
+version = "0.3.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cb7f578e5945fb242538965c2d0b04418d38ec25c79d160cd279bf0731c8d319"
+dependencies = [
+ "nu-ansi-term",
+ "sharded-slab",
+ "smallvec",
+ "thread_local",
+ "tracing-core",
+ "tracing-log",
 ]
 
 [[package]]
@@ -618,6 +967,12 @@ name = "unicode-ident"
 version = "1.0.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
+
+[[package]]
+name = "valuable"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65"
 
 [[package]]
 name = "version_check"
@@ -630,3 +985,18 @@ name = "windows-link"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5"
+
+[[package]]
+name = "windows-sys"
+version = "0.61.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc"
+dependencies = [
+ "windows-link",
+]
+
+[[package]]
+name = "zmij"
+version = "1.0.21"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa"

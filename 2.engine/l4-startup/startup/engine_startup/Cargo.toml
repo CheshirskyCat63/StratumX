@@ -1,0 +1,34 @@
+[package]
+name = "engine_startup"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_runtime = { path = "../../../l1-runtime-kernel/runtime/engine_runtime" }
+engine_runtime_headless = { path = "../../../l1-runtime-kernel/runtime-headless/engine_runtime_headless" }
+engine_runtime_realtime = { path = "../../../l1-runtime-kernel/runtime-realtime/engine_runtime_realtime" }
+engine_stream_control = { path = "../../../l1.5-runtime-resource-services/stream-control/engine_stream_control" }
+engine_residency_control = { path = "../../../l1.5-runtime-resource-services/residency-control/engine_residency_control" }
+engine_memory_control = { path = "../../../l1.5-runtime-resource-services/memory-control/engine_memory_control" }
+engine_transfer_control = { path = "../../../l1.5-runtime-resource-services/transfer-control/engine_transfer_control" }
+engine_kinetics = { path = "../../../l2-critical-simulation-families/kinetics/engine_kinetics" }
+engine_field = { path = "../../../l2-critical-simulation-families/field/engine_field" }
+engine_agents = { path = "../../../l2-critical-simulation-families/agents/engine_agents" }
+engine_net_transport = { path = "../../../l2.5-network-runtime-services/net-transport/engine_net_transport" }
+engine_net_sync = { path = "../../../l2.5-network-runtime-services/net-sync/engine_net_sync" }
+engine_net_latency = { path = "../../../l2.5-network-runtime-services/net-latency/engine_net_latency" }
+engine_inference = { path = "../../../l3.0-model-systems/inference/engine_inference" }
+engine_generation = { path = "../../../l3.0-model-systems/generation/engine_generation" }
+engine_imaging = { path = "../../../l3.1-synthesis-systems/imaging/engine_imaging" }
+engine_acoustics = { path = "../../../l3.1-synthesis-systems/acoustics/engine_acoustics" }
+engine_content = { path = "../../../l3.2-resource-systems/content/engine_content" }
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+backtrace.workspace = true

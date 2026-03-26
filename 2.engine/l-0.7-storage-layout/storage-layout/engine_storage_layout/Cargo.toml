@@ -1,0 +1,13 @@
+[package]
+name = "engine_storage_layout"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+bitflags = { version = "2", features = ["serde"] }
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+serde = { version = "1", features = ["derive"] }
+smallvec = { version = "1", features = ["serde"] }

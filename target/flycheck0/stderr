@@ -1,0 +1,86 @@
+   0.010523700s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="engine_core"}: cargo::core::compiler::fingerprint: fingerprint error for engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("engine_core", ["lib"], "E:\\Development\\StratumX\\2.engine\\l-1-foundation\\core\\engine_core\\src\\lib.rs", Edition2021) }
+   0.010762000s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="engine_core"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\Development\StratumX\target\debug\.fingerprint\engine_core-1e26207cb3dc1214\lib-engine_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.017613000s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="engine_core"}: cargo::core::compiler::fingerprint: fingerprint error for engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("engine_core", ["lib"], "E:\\Development\\StratumX\\2.engine\\l-1-foundation\\core\\engine_core\\src\\lib.rs", Edition2021) }
+   0.017647100s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="engine_core"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\Development\StratumX\target\debug\.fingerprint\engine_core-95d4952faa5c47c6\test-lib-engine_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.017968100s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="foundation"}: cargo::core::compiler::fingerprint: fingerprint error for engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core)/Check { test: true }/TargetInner { kind: "test", name: "foundation", benched: false, ..: with_path("E:\\Development\\StratumX\\2.engine\\l-1-foundation\\core\\engine_core\\tests\\foundation.rs", Edition2021) }
+   0.017983900s  INFO prepare_target{force=false package_id=engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core) target="foundation"}: cargo::core::compiler::fingerprint:     err: failed to read `E:\Development\StratumX\target\debug\.fingerprint\engine_core-8a00c7257c1de384\test-integration-test-foundation`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking engine_core v0.1.0 (E:\Development\StratumX\2.engine\l-1-foundation\core\engine_core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.24s

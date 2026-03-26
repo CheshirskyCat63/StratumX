@@ -19,27 +19,27 @@ jobs:
         uses: Swatinem/rust-cache@v2
 
       - name: Setup
-        shell: pwsh
-        run: ./scripts/setup-dev.ps1
+        shell: bash
+        run: bash ./scripts/setup-dev.sh
 
       - name: Tests
-        shell: pwsh
-        run: ./scripts/test-all.ps1
+        shell: bash
+        run: bash ./scripts/test-all.sh
 
       - name: Smoke
-        shell: pwsh
-        run: ./scripts/smoke-all.ps1
+        shell: bash
+        run: bash ./scripts/smoke-all.sh
 
       - name: Bench
-        shell: pwsh
-        run: ./scripts/bench-all.ps1
+        shell: bash
+        run: bash ./scripts/bench-all.sh
 
       - name: Metrics
-        shell: pwsh
-        run: ./scripts/metrics-all.ps1
+        shell: bash
+        run: bash ./scripts/metrics-all.sh
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ci-artifacts
-          path: artifacts/
+          path: artifacts/SSSSS

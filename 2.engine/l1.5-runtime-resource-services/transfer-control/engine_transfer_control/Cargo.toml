@@ -1,0 +1,16 @@
+[package]
+name = "engine_transfer_control"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_handle = { path = "../../../l-0.8-handle/handle/engine_handle" }
+engine_stream_control = { path = "../../stream-control/engine_stream_control" }
+engine_memory_control = { path = "../../memory-control/engine_memory_control" }
+bytemuck.workspace = true
+smallvec.workspace = true
+tracing.workspace = true

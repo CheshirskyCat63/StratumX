@@ -1,33 +1,28 @@
-$ErrorActionPreference = "Stop"
+#!/usr/bin/env bash
+set -euo pipefail
 
-function Step($m) { Write-Host "[*] $m" -ForegroundColor Cyan }
-function Fail($m) { Write-Host "[!] $m" -ForegroundColor Red; exit 1 }
+echo "[*] Checking repository root"
+test -d "./1.docs/canonical" || { echo "[!] Missing ./1.docs/canonical"; exit 1; }
 
-Step "Checking repository root"
-if (-not (Test-Path ".\1.docs\canonical")) { Fail "Missing .\1.docs\canonical" }
+echo "[*] Checking tools"
+command -v git >/dev/null 2>&1 || { echo "[!] git not found"; exit 1; }
+command -v cargo >/dev/null 2>&1 || { echo "[!] cargo not found"; exit 1; }
+command -v rustc >/dev/null 2>&1 || { echo "[!] rustc not found"; exit 1; }
 
-Step "Checking tools"
-$null = Get-Command git -ErrorAction Stop
-$null = Get-Command cargo -ErrorAction Stop
-$null = Get-Command rustc -ErrorAction Stop
-
-Step "Checking Rust toolchain"
+echo "[*] Rust versions"
 rustc --version
 cargo --version
 
-Step "Fetching dependencies"
+echo "[*] Fetching dependencies"
 cargo fetch
 
-Step "Preparing artifact folders"
-@(
-    ".\artifacts",
-    ".\artifacts\bench",
-    ".\artifacts\logs",
-    ".\artifacts\reports",
-    ".\artifacts\smoke",
-    ".\artifacts\test-results"
-) | ForEach-Object {
-    if (-not (Test-Path $_)) { New-Item -ItemType Directory -Path $_ | Out-Null }
-}
+echo "[*] Preparing artifact folders"
+mkdir -p \
+  ./artifacts \
+  ./artifacts/bench \
+  ./artifacts/logs \
+  ./artifacts/reports \
+  ./artifacts/smoke \
+  ./artifacts/test-results
 
-Step "Setup complete"
+echo "[*] Setup complete"

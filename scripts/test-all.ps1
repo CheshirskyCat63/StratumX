@@ -1,12 +1,11 @@
-$ErrorActionPreference = "Stop"
+#!/usr/bin/env bash
+set -euo pipefail
 
-function Step($m) { Write-Host "[*] $m" -ForegroundColor Cyan }
+echo "[*] cargo fmt --all --check"
+cargo fmt --all --check 2>&1 | tee ./artifacts/test-results/fmt.txt
 
-Step "cargo fmt --all --check"
-cargo fmt --all --check 2>&1 | Tee-Object -FilePath ".\artifacts\test-results\fmt.txt"
+echo "[*] cargo clippy --workspace --all-targets --all-features -- -D warnings"
+cargo clippy --workspace --all-targets --all-features -- -D warnings 2>&1 | tee ./artifacts/test-results/clippy.txt
 
-Step "cargo clippy --workspace --all-targets --all-features -- -D warnings"
-cargo clippy --workspace --all-targets --all-features -- -D warnings 2>&1 | Tee-Object -FilePath ".\artifacts\test-results\clippy.txt"
-
-Step "cargo test --workspace --all-features"
-cargo test --workspace --all-features 2>&1 | Tee-Object -FilePath ".\artifacts\test-results\cargo-test.txt"
+echo "[*] cargo test --workspace --all-features"
+cargo test --workspace --all-features 2>&1 | tee ./artifacts/test-results/cargo-test.txt

@@ -1,9 +1,5 @@
-$ErrorActionPreference = "Stop"
+#!/usr/bin/env bash
+set -euo pipefail
 
-function Step($m) { Write-Host "[*] $m" -ForegroundColor Cyan }
-
-Step "Running smoke checks"
-"SMOKE: define project-specific smoke commands here." | Tee-Object -FilePath ".\artifacts\smoke\smoke.txt"
-
-# Replace this placeholder with real commands, for example:
-# cargo run -p engine_headless -- --smoke
+echo "[*] Running smoke checks"
+echo "SMOKE: define project-specific smoke commands here." | tee ./artifacts/smoke/smoke.txt

@@ -1,29 +1,65 @@
-$ErrorActionPreference = "Stop"
+#!/usr/bin/env bash
+set -euo pipefail
 
-function Step($m) { Write-Host "[*] $m" -ForegroundColor Cyan }
-
-$reportPath = ".\artifacts\reports\metrics-summary.md"
-$buildTime = "N/A"
-$startupMs = "N/A"
-$fixedTickMean = "N/A"
-$fixedTickP95 = "N/A"
-$peakRss = "N/A"
-$allocsPerTick = "N/A"
-$binarySize = "N/A"
-
-Step "Writing metrics summary"
-
-@"
+cat > ./artifacts/reports/metrics-summary.md <<'EOF'
 # Metrics Summary
 
-- build time: $buildTime
-- startup ms: $startupMs
-- fixed tick mean ms: $fixedTickMean
-- fixed tick p95 ms: $fixedTickP95
-- peak rss mb: $peakRss
-- allocs per tick: $allocsPerTick
-- binary size: $binarySize
+- build time: N/A
+- startup ms: N/A
+- fixed tick mean ms: N/A
+- fixed tick p95 ms: N/A
+- peak rss mb: N/A
+- allocs per tick: N/A
+- binary size: N/A
 
 ## Notes
 Replace placeholder values with real metrics once smoke and benchmark commands are wired.
-"@ | Set-Content -Path $reportPath -Encoding utf8
+EOF#!/usr/bin/env bash
+set -euo pipefail
+
+cat > ./artifacts/reports/metrics-summary.md <<'EOF'
+# Metrics Summary
+
+- build time: N/A
+- startup ms: N/A
+- fixed tick mean ms: N/A
+- fixed tick p95 ms: N/A
+- peak rss mb: N/A
+- allocs per tick: N/A
+- binary size: N/A
+
+## Notes
+Replace placeholder values with real metrics once smoke and benchmark commands are wired.
+EOF#!/usr/bin/env bash
+set -euo pipefail
+
+cat > ./artifacts/reports/metrics-summary.md <<'EOF'
+# Metrics Summary
+
+- build time: N/A
+- startup ms: N/A
+- fixed tick mean ms: N/A
+- fixed tick p95 ms: N/A
+- peak rss mb: N/A
+- allocs per tick: N/A
+- binary size: N/A
+
+## Notes
+Replace placeholder values with real metrics once smoke and benchmark commands are wired.
+EOF#!/usr/bin/env bash
+set -euo pipefail
+
+cat > ./artifacts/reports/metrics-summary.md <<'EOF'
+# Metrics Summary
+
+- build time: N/A
+- startup ms: N/A
+- fixed tick mean ms: N/A
+- fixed tick p95 ms: N/A
+- peak rss mb: N/A
+- allocs per tick: N/A
+- binary size: N/A
+
+## Notes
+Replace placeholder values with real metrics once smoke and benchmark commands are wired.
+EOF

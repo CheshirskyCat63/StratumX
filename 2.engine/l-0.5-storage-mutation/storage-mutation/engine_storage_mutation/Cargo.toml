@@ -1,0 +1,18 @@
+[package]
+name = "engine_storage_mutation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_handle = { path = "../../../l-0.8-handle/handle/engine_handle" }
+engine_storage_layout = { path = "../../../l-0.7-storage-layout/storage-layout/engine_storage_layout" }
+engine_storage_access = { path = "../../../l-0.6-storage-access/storage-access/engine_storage_access" }
+bitflags.workspace = true
+smallvec.workspace = true
+
+[dev-dependencies]
+engine_identity = { path = "../../../l-0.9-identity/identity/engine_identity" }

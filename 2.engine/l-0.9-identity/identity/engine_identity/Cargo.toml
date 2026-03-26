@@ -1,20 +1,12 @@
 [package]
-name = "engine_core"
+name = "engine_identity"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 authors.workspace = true
 rust-version.workspace = true
 
-[features]
-default = []
-headless = []
-realtime = []
-
 [dependencies]
-glam.workspace = true
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
 serde.workspace = true
-thiserror.workspace = true
-
-[dev-dependencies]
-glam.workspace = true
+slotmap.workspace = true

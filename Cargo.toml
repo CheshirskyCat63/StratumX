@@ -6,6 +6,12 @@ members = [
   "2.engine/l-0.7-storage-layout/storage-layout/engine_storage_layout",
   "2.engine/l-0.6-storage-access/storage-access/engine_storage_access",
   "2.engine/l-0.5-storage-mutation/storage-mutation/engine_storage_mutation",
+  "2.engine/l-0.4-ecs-registry/ecs-registry/engine_ecs_registry",
+  "2.engine/l-0.3-ecs-query/ecs-query/engine_ecs_query",
+  "2.engine/l-0.2-ecs-assembly/ecs/engine_ecs",
+  "2.engine/l-0.1-world-spatial/world-spatial/engine_world_spatial",
+  "2.engine/l-0.05-world-region/world-region/engine_world_region",
+  "2.engine/l0-world-truth/world/engine_world",
 ]
 resolver = "2"
 
@@ -23,3 +29,4 @@ serde = { version = "1.0", features = ["derive"] }
 slotmap = { version = "1.0", features = ["serde"] }
 smallvec = { version = "1.13", features = ["serde"] }
 thiserror = "1.0"
+bincode = "1.3"

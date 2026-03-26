@@ -17,5 +17,5 @@ impl Generation {
 pub struct Tick(pub u64);
 
 /// Stable type id for component columns/signatures.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub struct ComponentTypeId(pub u64);

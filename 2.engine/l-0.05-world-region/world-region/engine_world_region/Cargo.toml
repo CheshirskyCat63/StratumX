@@ -1,0 +1,13 @@
+[package]
+name = "engine_world_region"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_world_spatial = { path = "../../../l-0.1-world-spatial/world-spatial/engine_world_spatial" }
+serde.workspace = true
+bitflags.workspace = true

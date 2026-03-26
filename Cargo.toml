@@ -1,6 +1,7 @@
 [workspace]
 members = [
   "2.engine/l-1-foundation/core/engine_core",
+  "2.engine/l-0.8-handle-system/handle/engine_handle",
 ]
 resolver = "2"
 

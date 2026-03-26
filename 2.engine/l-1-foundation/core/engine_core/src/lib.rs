@@ -6,8 +6,8 @@ pub mod flags;
 pub mod math;
 pub mod types;
 
-pub use contracts::{EngineDescriptor, StaticDescriptor};
+pub use contracts::{EngineDescriptor, Invariant};
 pub use error::{EngineCoreError, EngineCoreResult};
 pub use flags::{FeatureProfile, ACTIVE_PROFILE};
-pub use math::{Mat4f, Quatf, Vec2f, Vec3f, Vec4f};
-pub use types::{ComponentKind, EntityId, Tick};
+pub use math::{Aabb3f, Mat4f, Quatf, Vec2f, Vec3f, Vec4f};
+pub use types::{ComponentTypeId, Generation, Tick};

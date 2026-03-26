@@ -1,35 +1,17 @@
 //! Unified engine math backbone.
 
-#[derive(Debug, Clone, Copy, PartialEq)]
-pub struct Vec2f {
-    pub x: f32,
-    pub y: f32,
+pub use glam::{Mat4 as Mat4f, Quat as Quatf, Vec2 as Vec2f, Vec3 as Vec3f, Vec4 as Vec4f};
+use serde::{Deserialize, Serialize};
+
+/// Axis-aligned bounds primitive used by higher layers.
+#[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
+pub struct Aabb3f {
+    pub min: Vec3f,
+    pub max: Vec3f,
 }
 
-#[derive(Debug, Clone, Copy, PartialEq)]
-pub struct Vec3f {
-    pub x: f32,
-    pub y: f32,
-    pub z: f32,
-}
-
-#[derive(Debug, Clone, Copy, PartialEq)]
-pub struct Vec4f {
-    pub x: f32,
-    pub y: f32,
-    pub z: f32,
-    pub w: f32,
-}
-
-#[derive(Debug, Clone, Copy, PartialEq)]
-pub struct Quatf {
-    pub x: f32,
-    pub y: f32,
-    pub z: f32,
-    pub w: f32,
-}
-
-#[derive(Debug, Clone, Copy, PartialEq)]
-pub struct Mat4f {
-    pub cols: [Vec4f; 4],
+impl Aabb3f {
+    pub fn validate(&self) -> bool {
+        self.min.cmple(self.max).all()
+    }
 }

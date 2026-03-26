@@ -1,20 +1,13 @@
 [package]
-name = "engine_core"
+name = "engine_storage_layout"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 authors.workspace = true
 rust-version.workspace = true
 
-[features]
-default = []
-headless = []
-realtime = []
-
 [dependencies]
-glam.workspace = true
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+bitflags.workspace = true
 serde.workspace = true
-thiserror.workspace = true
-
-[dev-dependencies]
-glam.workspace = true
+smallvec.workspace = true

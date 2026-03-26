@@ -1,6 +1,11 @@
 [workspace]
 members = [
   "2.engine/l-1-foundation/core/engine_core",
+  "2.engine/l-0.9-identity/identity/engine_identity",
+  "2.engine/l-0.8-handle/handle/engine_handle",
+  "2.engine/l-0.7-storage-layout/storage-layout/engine_storage_layout",
+  "2.engine/l-0.6-storage-access/storage-access/engine_storage_access",
+  "2.engine/l-0.5-storage-mutation/storage-mutation/engine_storage_mutation",
 ]
 resolver = "2"
 
@@ -10,3 +15,11 @@ license = "MIT OR Apache-2.0"
 version = "0.1.0"
 authors = ["StratumX Contributors"]
 rust-version = "1.76"
+
+[workspace.dependencies]
+bitflags = { version = "2.6", features = ["serde"] }
+glam = { version = "0.27", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+slotmap = { version = "1.0", features = ["serde"] }
+smallvec = { version = "1.13", features = ["serde"] }
+thiserror = "1.0"

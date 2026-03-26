@@ -1,0 +1,19 @@
+[package]
+name = "engine_memory_control"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+engine_core = { path = "../../../l-1-foundation/core/engine_core" }
+engine_handle = { path = "../../../l-0.8-handle/handle/engine_handle" }
+engine_storage_layout = { path = "../../../l-0.7-storage-layout/storage-layout/engine_storage_layout" }
+engine_world = { path = "../../../l0-world-truth/world/engine_world" }
+engine_runtime = { path = "../../../l1-runtime-kernel/runtime/engine_runtime" }
+parking_lot.workspace = true
+smallvec.workspace = true
+tracing.workspace = true
+bumpalo.workspace = true
+mimalloc.workspace = true
